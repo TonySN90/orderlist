@@ -60,6 +60,7 @@ const controlRenderShoCa = function () {
 const init = function () {
   DashboardView.addHandlerLoadDb(controlLoadDb);
   console.log("Welcome");
+  console.log("test");
 };
 
 init();
