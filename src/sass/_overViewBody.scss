@@ -1,0 +1,152 @@
+.mainBody {
+  padding: 0;
+}
+.dashborad {
+  padding: 0;
+}
+
+.myDealer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+
+  // width: 80%;
+  border-bottom: rgba(255, 255, 255, 0.22) solid 1px;
+}
+
+.dealerTitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.cards {
+  width: 320px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card {
+  width: 9rem;
+  height: 12rem;
+  margin: 0.5rem;
+  background: #fff;
+
+  border-radius: 0.5rem;
+  list-style: none;
+}
+
+.cardTitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.cardUnit {
+  margin: 0.2rem 0 0.1rem 0;
+}
+
+.listEntryContainer {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dealerLogo {
+  width: 60px;
+  height: 60px;
+  right: 0.5rem;
+  top: 0.5rem;
+  background-color: $color-bg;
+
+  margin-bottom: 1rem;
+}
+
+.dealerLogo img {
+  width: 60px;
+  height: 60px;
+}
+
+.listEntry p {
+  color: black;
+  padding: 0;
+  line-height: 1rem;
+}
+
+.pTitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.pLastUse {
+  margin-bottom: 0.3rem;
+  font-size: 0.85rem;
+}
+
+.pDate {
+  font-size: 0.85rem;
+}
+
+// Add Dealer -----------------------------------------------------
+
+.addDealer {
+  font-weight: bold;
+}
+
+.inputContainer {
+  margin-left: auto;
+  margin-right: auto;
+  margin: 1rem auto 1rem auto;
+  width: 304px;
+  display: flex;
+}
+
+.inputDealer {
+  padding-left: 1rem;
+}
+
+::placeholder {
+  padding-left: 1rem;
+}
+
+.button--addDealer {
+  height: 3.2rem;
+  width: 3.2rem;
+  background-color: $orangeFull;
+  border-radius: 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 0.1rem;
+}
+
+.inputAddDealer input {
+  background-color: $color-bg;
+  box-sizing: unset;
+  height: 3rem;
+  width: 14rem;
+  border-radius: 2rem;
+  border: 1px #ffffff54 solid;
+  margin-right: 1.3rem;
+}
+
+.plus {
+  margin: 0;
+  height: 1.3rem;
+  width: 1.3rem;
+  background: url(../img/plus-solid.svg) no-repeat;
+}

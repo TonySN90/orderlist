@@ -1,0 +1,37 @@
+.cartList {
+  width: 320px;
+  margin: 0.5rem auto 0 auto;
+}
+
+.cartList ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cartList ul li {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.1rem 0 0.1rem 0;
+}
+
+.listTrashButton {
+  width: 1rem;
+  background: url(../img/trash-solid.svg) no-repeat;
+  margin-top: 0.2rem;
+}
+
+.listProductName {
+  width: 50%;
+}
+
+.listProductQuantity {
+  width: 5%;
+}
+
+.listProductUnit {
+  width: 20%;
+}
+
+.listTrashButton {
+  width: 5%;
+}

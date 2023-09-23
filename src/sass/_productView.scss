@@ -1,0 +1,131 @@
+.productImgSection {
+  background-color: #fff;
+  height: 45vh;
+  display: flex;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 30%,
+    100% 100%,
+    74% 88%,
+    29% 88%,
+    0 78%,
+    0% 30%
+  );
+  // clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 86%);
+}
+
+.productSection {
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.productImgContainer {
+  background-color: #fff;
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.productImgSection img {
+  width: 15rem;
+  height: 15rem;
+}
+
+// .productSection .productTitle {
+//   margin-top: 1rem;
+// }
+
+.productTitle h1 {
+  margin-bottom: 1rem;
+}
+
+.units {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.quantityContainer {
+  display: flex;
+  align-items: center;
+}
+
+.quanButton {
+  width: 2rem;
+  height: 2rem;
+  background-color: white;
+
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  border-radius: 0.6rem;
+  position: relative;
+}
+
+.quantity {
+  margin-left: 0.7rem;
+  margin-right: 0.7rem;
+}
+
+.quanButton p {
+  font-size: 1.5rem;
+  color: black;
+  position: absolute;
+  left: 0.6rem;
+  top: -0.3rem;
+}
+
+.addButton {
+  margin-top: 1.3rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10rem;
+  height: 2.5rem;
+  background-color: $orangeFull;
+
+  border-radius: 0.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrBack {
+  position: absolute;
+  left: 1.7rem;
+  top: 1.5rem;
+
+  width: 2rem;
+  height: 2rem;
+
+  background: url(../img/arrow-left-solid.svg) no-repeat;
+}
+
+.heartBorderedProduct {
+  position: absolute;
+  right: 1.7rem;
+  top: 1.5rem;
+
+  width: 2rem;
+  height: 2rem;
+
+  background: url(../img/heart-regular.svg) no-repeat;
+}
+
+.heartFilledProduct {
+  position: absolute;
+  right: 1.7rem;
+  top: 1.5rem;
+
+  width: 2rem;
+  height: 2rem;
+
+  background: url(../img/heart-solid.svg) no-repeat;
+}

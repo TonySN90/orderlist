@@ -1,0 +1,31 @@
+$color-bg: #2a2a2a;
+$gradient: linear-gradient(45deg, rgb(0, 57, 201), rgb(109, 201, 254) 100%);
+$orangeFull: #ff7100;
+
+$gradient_low: linear-gradient(
+  45deg,
+  rgb(252, 119, 98) 25%,
+  rgb(255, 224, 20) 100%
+);
+
+* {
+  margin: 0;
+  color: #fff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $color-bg;
+  // height: 100vh;
+  font-family: "Titillium Web", sans-serif;
+  // padding: 1.5rem;
+}
+
+.hidden {
+  display: none;
+}
