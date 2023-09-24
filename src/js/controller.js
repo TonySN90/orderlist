@@ -7,6 +7,11 @@ import shoppingCartView from "./views/shoppingCartView";
 import ShoppinglistView from "./views/shoppinglistView";
 import headerView from "./views/headerView";
 import productView from "./views/productView";
+import menuView from "./views/menuView.js";
+
+const controlMenu = function () {
+  menuView.openMenu();
+};
 
 const controlAddBookmark = function () {
   model.addBookmark(model.state.product);
@@ -59,8 +64,7 @@ const controlRenderShoCa = function () {
 
 const init = function () {
   DashboardView.addHandlerLoadDb(controlLoadDb);
-  console.log("Welcome");
-  console.log("test");
+  controlMenu();
 };
 
 init();

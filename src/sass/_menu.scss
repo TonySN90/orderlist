@@ -1,0 +1,54 @@
+#menu {
+  width: 0;
+  height: 100%;
+  background-color: $orangeFull;
+  position: fixed;
+  top: 0;
+  right: 0;
+  border-bottom-left-radius: 1rem;
+  border-top-left-radius: 1rem;
+  z-index: 1;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.containerList ul {
+  list-style: none;
+  padding-left: 1rem;
+  margin-top: 4rem;
+  display: block;
+}
+
+.containerList ul li {
+  width: 70vw;
+  font-size: 1.5rem;
+  transition: 0.3s;
+}
+
+.closeButtonContainer {
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+.line1 {
+  position: absolute;
+  top: 0.85rem;
+  width: 2rem;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 1rem;
+  transform: rotate(45deg);
+}
+
+.line2 {
+  position: absolute;
+  top: 0.85rem;
+  width: 2rem;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 1rem;
+  transform: rotate(-45deg);
+}
