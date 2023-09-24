@@ -2,6 +2,7 @@ export let productsLidl = [
   {
     id: 1001,
     name: "Eisbergsalat",
+    unit: "Kiste",
     category: "vegAndFruit",
     image_src:
       "https://img.rewe-static.de/0482595/24570316_digital-image.png?impolicy=s-products&imwidth=200&output-format=image/webp",
@@ -11,6 +12,7 @@ export let productsLidl = [
   {
     id: 1002,
     name: "Tomaten",
+    unit: "Netz",
     category: "vegAndFruit",
     image_src:
       "https://img.rewe-static.de/1186400/8599550_digital-image.png?impolicy=s-offers&imwidth=200&output-format=image/webp",
@@ -20,6 +22,7 @@ export let productsLidl = [
   {
     id: 1003,
     name: "Gurken",
+    unit: "Kiste",
     category: "vegAndFruit",
     image_src:
       "https://img.rewe-static.de/0708720/7360590_digital-image.png?impolicy=s-products&imwidth=464&output-format=image/webp",
@@ -27,6 +30,7 @@ export let productsLidl = [
   {
     id: 1004,
     name: "Orangen",
+    unit: "Netz",
     category: "vegAndFruit",
     image_src:
       "https://img.rewe-static.de/8076862/29833725_digital-image.png?impolicy=s-products&imwidth=200&output-format=image/webp",
@@ -34,6 +38,7 @@ export let productsLidl = [
   {
     id: 1005,
     name: "Zitronen",
+    unit: "Netz",
     category: "vegAndFruit",
     image_src:
       "https://img.rewe-static.de/8666238/38578646_digital-image.png?impolicy=s-offers&imwidth=200&output-format=image/webp",
@@ -41,6 +46,7 @@ export let productsLidl = [
   {
     id: 1006,
     name: "Paprika",
+    unit: "stk",
     category: "vegAndFruit",
     image_src:
       "https://img.rewe-static.de/0293205/8578590_digital-image.png?impolicy=s-offers&imwidth=200&output-format=image/webp",
@@ -49,12 +55,14 @@ export let productsLidl = [
     id: 1007,
     name: "Möhren",
     category: "vegAndFruit",
+    unit: "Beutel",
     image_src:
       "https://img.rewe-static.de/8339524/30105634_digital-image.png?impolicy=s-offers&imwidth=200&output-format=image/webp",
   },
   {
     id: 1008,
     name: "Äpfel",
+    unit: "Sack",
     category: "vegAndFruit",
     image_src:
       "https://img.rewe-static.de/0005428/27448814_digital-image.png?impolicy=s-offers&imwidth=200&output-format=image/webp",
@@ -62,6 +70,7 @@ export let productsLidl = [
   {
     id: 1009,
     name: "Rucola",
+    unit: "Packen",
     category: "vegAndFruit",
     image_src:
       "https://img.rewe-static.de/0863980/11742250_digital-image.png?impolicy=s-offers&imwidth=200&output-format=image/webp",
@@ -69,6 +78,7 @@ export let productsLidl = [
   {
     id: 1010,
     name: "Lauchzwiebeln",
+    unit: "Bund",
     category: "vegAndFruit",
     image_src:
       "https://img.rewe-static.de/7138093/26921109_digital-image.png?impolicy=s-offers&imwidth=200&output-format=image/webp",
@@ -76,6 +86,7 @@ export let productsLidl = [
   {
     id: 1011,
     name: "Zwiebeln",
+    unit: "Netz",
     category: "vegAndFruit",
     image_src:
       "https://img.rewe-static.de/7156504/27725597_digital-image.png?impolicy=s-offers&imwidth=200&output-format=image/webp",
@@ -83,6 +94,7 @@ export let productsLidl = [
   {
     id: 1012,
     name: "Knoblauch",
+    unit: "Netz",
     category: "vegAndFruit",
     image_src:
       "https://img.rewe-static.de/1993507/21799568_digital-image.png?impolicy=s-offers&imwidth=200&output-format=image/webp",
@@ -90,6 +102,7 @@ export let productsLidl = [
   {
     id: 1013,
     name: "Ingwer",
+    unit: "stk",
     category: "vegAndFruit",
     image_src:
       "https://img.rewe-static.de/5222060/8945760_digital-image.png?impolicy=s-offers&imwidth=200&output-format=image/webp",
@@ -97,6 +110,7 @@ export let productsLidl = [
   {
     id: 1014,
     name: "Kartoffeln",
+    unit: "Netz",
     category: "vegAndFruit",
     image_src:
       "https://img.rewe-static.de/8378934/31571991_digital-image.png?impolicy=s-offers&imwidth=200&output-format=image/webp",
@@ -104,6 +118,7 @@ export let productsLidl = [
   {
     id: 1015,
     name: "Bratwürste",
+    unit: "Packen",
     category: "meatAndSau",
     image_src:
       "https://img.rewe-static.de/2380998/31507806_digital-image.png?impolicy=s-offers&imwidth=200&output-format=image/webp",
@@ -111,6 +126,7 @@ export let productsLidl = [
   {
     id: 1016,
     name: "Schinken",
+    unit: "Pack",
     category: "meatAndSau",
     image_src:
       "https://img.rewe-static.de/8577412/27664718_digital-image.png?impolicy=s-offers&imwidth=200&output-format=image/webp",
@@ -118,6 +134,7 @@ export let productsLidl = [
   {
     id: 1017,
     name: "Gratinkäse",
+    unit: "Tüte",
     category: "whey",
     image_src:
       "https://img.rewe-static.de/1145368/10594530_digital-image.png?impolicy=s-offers&imwidth=200&output-format=image/webp",
@@ -125,6 +142,7 @@ export let productsLidl = [
   {
     id: 1018,
     name: "Butter",
+    unit: "stk",
     category: "whey",
     image_src:
       "https://img.rewe-static.de/4530594/1092510_digital-image.png?impolicy=s-offers&imwidth=200&output-format=image/webp",
@@ -132,6 +150,7 @@ export let productsLidl = [
   {
     id: 1019,
     name: "Speisestärke",
+    unit: "stk",
     category: "other",
     image_src:
       "https://img.rewe-static.de/7079648/7477540_digital-image.png?impolicy=s-offers&imwidth=200&output-format=image/webp",
@@ -139,6 +158,7 @@ export let productsLidl = [
   {
     id: 1020,
     name: "Apfelmus",
+    unit: "Glas",
     category: "glassAndCanned",
     image_src:
       "https://img.rewe-static.de/8964724/40416249_digital-image.png?impolicy=s-offers&imwidth=200&output-format=image/webp",
@@ -146,6 +166,7 @@ export let productsLidl = [
   {
     id: 1022,
     name: "Eier",
+    unit: "Pack",
     category: "other",
     image_src:
       "https://img.rewe-static.de/8745686/35592023_digital-image.png?impolicy=s-offers&imwidth=200&output-format=image/webp",
@@ -153,6 +174,7 @@ export let productsLidl = [
   {
     id: 1023,
     name: "Mais",
+    unit: "Dose",
     category: "glassAndCanned",
     image_src:
       "https://img.rewe-static.de/1945790/23329848_digital-image.png?impolicy=s-offers&imwidth=200&output-format=image/webp",
@@ -160,6 +182,7 @@ export let productsLidl = [
   {
     id: 1024,
     name: "Bohnen",
+    unit: "Dose",
     category: "glassAndCanned",
     image_src:
       "https://img.rewe-static.de/6177620/24356522_digital-image.png?impolicy=s-offers&imwidth=200&output-format=image/webp",
@@ -167,6 +190,7 @@ export let productsLidl = [
   {
     id: 1025,
     name: "Honig",
+    unit: "Glas",
     category: "glassAndCanned",
     image_src:
       "https://img.rewe-static.de/7845005/35072447_digital-image.png?impolicy=s-offers&imwidth=200&output-format=image/webp",
@@ -174,6 +198,7 @@ export let productsLidl = [
   {
     id: 1027,
     name: "Vanilleies",
+    unit: "Netz",
     category: "snacks",
     image_src:
       "https://img.rewe-static.de/2101501/31224875_digital-image.png?impolicy=s-offers&imwidth=200&output-format=image/webp",
@@ -181,6 +206,7 @@ export let productsLidl = [
   {
     id: 1028,
     name: "Schokoeis",
+    unit: "Pack",
     category: "snacks",
     image_src:
       "https://img.rewe-static.de/2101508/22053613_digital-image.png?impolicy=s-offers&imwidth=200&output-format=image/webp",
@@ -188,6 +214,7 @@ export let productsLidl = [
   {
     id: 1029,
     name: "Himbeeren TK",
+    unit: "Tüte",
     category: "frozen",
     image_src:
       "https://img.rewe-static.de/7091046/30307193_digital-image.png?impolicy=s-products&imwidth=464&output-format=image/webp",
@@ -195,6 +222,7 @@ export let productsLidl = [
   {
     id: 1030,
     name: "Quark",
+    unit: "Pack",
     category: "whey",
     image_src:
       "https://img.rewe-static.de/7915060/32493967_digital-image.png?impolicy=s-offers&imwidth=200&output-format=image/webp",
@@ -202,6 +230,7 @@ export let productsLidl = [
   {
     id: 1031,
     name: "Schmand",
+    unit: "Becher",
     category: "other",
     image_src:
       "https://img.rewe-static.de/8187819/30965665_digital-image.png?impolicy=s-offers&imwidth=200&output-format=image/webp",
@@ -209,6 +238,7 @@ export let productsLidl = [
   {
     id: 1032,
     name: "Eierlikör",
+    unit: "Flasche",
     category: "spirits",
     image_src:
       "https://img.rewe-static.de/8704114/34920252_digital-image.png?impolicy=s-offers&imwidth=200&output-format=image/webp",
@@ -216,6 +246,7 @@ export let productsLidl = [
   {
     id: 1033,
     name: "Kokosmilch",
+    unit: "Dose",
     category: "glassAndCanned",
     image_src:
       "https://img.rewe-static.de/7738173/38411172_digital-image.png?impolicy=s-offers&imwidth=200&output-format=image/webp",
@@ -223,6 +254,7 @@ export let productsLidl = [
   {
     id: 1034,
     name: "Zitronensaft",
+    unit: "stk",
     category: "other",
     image_src:
       "https://img.rewe-static.de/0546552/34100990_digital-image.png?impolicy=s-offers&imwidth=200&output-format=image/webp",
@@ -230,6 +262,7 @@ export let productsLidl = [
   {
     id: 1035,
     name: "Müllbeutel 60 L",
+    unit: "Rolle",
     category: "nonFood",
     image_src:
       "https://img.rewe-static.de/0515505/23888545_digital-image.png?impolicy=s-offers&imwidth=200&output-format=image/webp",
@@ -237,6 +270,7 @@ export let productsLidl = [
   {
     id: 1036,
     name: "Müllbeutel 120 L",
+    unit: "Rolle",
     category: "nonFood",
     image_src:
       "https://img.rewe-static.de/2825703/25523317_digital-image.png?impolicy=s-offers&imwidth=200&output-format=image/webp",
@@ -244,6 +278,7 @@ export let productsLidl = [
   {
     id: 1037,
     name: "Gefrierbeutel",
+    unit: "stk",
     category: "other",
     image_src:
       "https://img.rewe-static.de/2383246/29944181_digital-image.png?impolicy=s-offers&imwidth=200&output-format=image/webp",
