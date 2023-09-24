@@ -9,8 +9,13 @@ import headerView from "./views/headerView";
 import productView from "./views/productView";
 import menuView from "./views/menuView.js";
 
+const controlBackToDB = function () {
+  controlLoadDb();
+  headerView.movementHeader();
+};
+
 const controlMenu = function () {
-  menuView.openMenu();
+  menuView.toDealer(controlBackToDB);
 };
 
 const controlAddBookmark = function () {
@@ -64,6 +69,7 @@ const controlRenderShoCa = function () {
 
 const init = function () {
   DashboardView.addHandlerLoadDb(controlLoadDb);
+  menuView.toggleMenu();
   controlMenu();
 };
 

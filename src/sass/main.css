@@ -1,0 +1,528 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300&display=swap");
+* {
+  margin: 0;
+  color: #fff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #2a2a2a;
+  font-family: "Titillium Web", sans-serif;
+}
+
+.hidden {
+  display: none;
+}
+
+#header {
+  height: 4rem;
+  border-bottom: #ff7100 solid 2px;
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#overview {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  color: #fff;
+  font-size: 20;
+}
+
+.t1 {
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+.t2 {
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+.t3 {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.t4 {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.headerDealerTitle {
+  margin-left: 2rem;
+}
+
+.overviewIcons {
+  display: flex;
+}
+
+.shoppingCartImg {
+  background: url(../img/cart-shopping-solid.svg) no-repeat;
+  width: 2rem;
+  height: 24px;
+  margin-top: 1px;
+  margin-right: 1.2rem;
+}
+
+.burgerContainer {
+  height: 24px;
+  left: 0.2rem;
+  top: 0.95rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.burger {
+  width: 28px;
+  height: 4px;
+  margin: auto;
+  background-color: white;
+  border-radius: 3px;
+}
+
+.mainBody {
+  padding: 0;
+}
+
+.dashborad {
+  padding: 0;
+}
+
+.myDealer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  border-bottom: rgba(255, 255, 255, 0.22) solid 1px;
+}
+
+.dealerTitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.cards {
+  width: 320px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card {
+  width: 9rem;
+  height: 12rem;
+  margin: 0.5rem;
+  background: #fff;
+  border-radius: 0.5rem;
+  list-style: none;
+}
+
+.cardTitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.cardUnit {
+  margin: 0.2rem 0 0.1rem 0;
+}
+
+.listEntryContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dealerLogo {
+  width: 60px;
+  height: 60px;
+  right: 0.5rem;
+  top: 0.5rem;
+  background-color: #2a2a2a;
+  margin-bottom: 1rem;
+}
+
+.dealerLogo img {
+  width: 60px;
+  height: 60px;
+}
+
+.listEntry p {
+  color: black;
+  padding: 0;
+  line-height: 1rem;
+}
+
+.pTitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.pLastUse {
+  margin-bottom: 0.3rem;
+  font-size: 0.85rem;
+}
+
+.pDate {
+  font-size: 0.85rem;
+}
+
+.addDealer {
+  font-weight: bold;
+}
+
+.inputContainer {
+  margin-left: auto;
+  margin-right: auto;
+  margin: 1rem auto 1rem auto;
+  width: 304px;
+  display: flex;
+}
+
+.inputDealer {
+  padding-left: 1rem;
+}
+
+::-moz-placeholder {
+  padding-left: 1rem;
+}
+
+::placeholder {
+  padding-left: 1rem;
+}
+
+.button--addDealer {
+  height: 3.2rem;
+  width: 3.2rem;
+  background-color: #ff7100;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 0.1rem;
+}
+
+.inputAddDealer input {
+  background-color: #2a2a2a;
+  box-sizing: unset;
+  height: 3rem;
+  width: 14rem;
+  border-radius: 2rem;
+  border: 1px rgba(255, 255, 255, 0.3294117647) solid;
+  margin-right: 1.3rem;
+}
+
+.plus {
+  margin: 0;
+  height: 1.3rem;
+  width: 1.3rem;
+  background: url(../img/plus-solid.svg) no-repeat;
+}
+
+.footerText {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255, 255, 255, 0.195);
+  padding-bottom: 0.4rem;
+}
+
+.smallMenu {
+  display: flex;
+  width: 304px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.smallMenu p {
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+}
+
+.card {
+  position: relative;
+  background-position: center;
+  background-size: 11rem;
+  background-repeat: no-repeat;
+}
+
+.cardEntry {
+  color: black;
+  padding: 1.3rem 1rem;
+}
+
+.cardTitle {
+  font-size: 1rem;
+}
+
+.cardEntry img {
+  width: 100px;
+  margin-left: 0.3rem;
+  margin-top: 0.5rem;
+  z-index: -1;
+}
+
+.imgSize {
+  background-repeat: no-repeat;
+  background-position: 1.5rem 1rem;
+  width: 120px;
+  height: 120px;
+}
+
+.heart {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.heartFilled {
+  background: url(../img/heart-solid.svg) no-repeat;
+}
+
+.heartBordered {
+  background: url(../img/heart-regular.svg) no-repeat;
+}
+
+.cardsShoppingCard {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  position: absolute;
+  left: 1rem;
+  bottom: 0.6rem;
+}
+
+.cartImg {
+  position: absolute;
+  left: 0.4rem;
+  top: 0.4rem;
+  width: 1.5rem;
+  height: 1.1rem;
+  background: url(../img/cart-shopping-solid.svg) no-repeat;
+}
+
+.big {
+  background: url(../img/cart-shopping-solid-big.svg) no-repeat;
+}
+
+.productImgSection {
+  background-color: #fff;
+  height: 45vh;
+  display: flex;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 30%, 100% 100%, 74% 88%, 29% 88%, 0 78%, 0% 30%);
+          clip-path: polygon(0 0, 100% 0, 100% 30%, 100% 100%, 74% 88%, 29% 88%, 0 78%, 0% 30%);
+}
+
+.productSection {
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.productImgContainer {
+  background-color: #fff;
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.productImgSection img {
+  width: 15rem;
+  height: 15rem;
+}
+
+.productTitle h1 {
+  margin-bottom: 1rem;
+}
+
+.units {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.quantityContainer {
+  display: flex;
+  align-items: center;
+}
+
+.quanButton {
+  width: 2rem;
+  height: 2rem;
+  background-color: white;
+  border-radius: 0.6rem;
+  position: relative;
+}
+
+.quantity {
+  margin-left: 0.7rem;
+  margin-right: 0.7rem;
+}
+
+.quanButton p {
+  font-size: 1.5rem;
+  color: black;
+  position: absolute;
+  left: 0.6rem;
+  top: -0.3rem;
+}
+
+.addButton {
+  margin-top: 1.3rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10rem;
+  height: 2.5rem;
+  background-color: #ff7100;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrBack {
+  position: absolute;
+  left: 1.7rem;
+  top: 1.5rem;
+  width: 2rem;
+  height: 2rem;
+  background: url(../img/arrow-left-solid.svg) no-repeat;
+}
+
+.heartBorderedProduct {
+  position: absolute;
+  right: 1.7rem;
+  top: 1.5rem;
+  width: 2rem;
+  height: 2rem;
+  background: url(../img/heart-regular.svg) no-repeat;
+}
+
+.heartFilledProduct {
+  position: absolute;
+  right: 1.7rem;
+  top: 1.5rem;
+  width: 2rem;
+  height: 2rem;
+  background: url(../img/heart-solid.svg) no-repeat;
+}
+
+.cartList {
+  width: 320px;
+  margin: 0.5rem auto 0 auto;
+}
+
+.cartList ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cartList ul li {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.1rem 0 0.1rem 0;
+}
+
+.listTrashButton {
+  width: 1rem;
+  background: url(../img/trash-solid.svg) no-repeat;
+  margin-top: 0.2rem;
+}
+
+.listProductName {
+  width: 50%;
+}
+
+.listProductQuantity {
+  width: 5%;
+}
+
+.listProductUnit {
+  width: 20%;
+}
+
+.listTrashButton {
+  width: 5%;
+}
+
+#menu {
+  width: 0;
+  height: 100%;
+  background-color: #ff7100;
+  position: fixed;
+  top: 0;
+  right: 0;
+  border-bottom-left-radius: 1rem;
+  border-top-left-radius: 1rem;
+  z-index: 1;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.containerList ul {
+  list-style: none;
+  padding-left: 1rem;
+  margin-top: 4rem;
+  display: block;
+}
+
+.containerList ul li {
+  width: 70vw;
+  font-size: 1.5rem;
+  transition: 0.3s;
+}
+
+.closeButtonContainer {
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+.line1 {
+  position: absolute;
+  top: 0.85rem;
+  width: 2rem;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 1rem;
+  transform: rotate(45deg);
+}
+
+.line2 {
+  position: absolute;
+  top: 0.85rem;
+  width: 2rem;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 1rem;
+  transform: rotate(-45deg);
+}/*# sourceMappingURL=main.css.map */

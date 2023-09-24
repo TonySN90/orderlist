@@ -7,6 +7,7 @@ export default class View {
     controlRenderShoCa: ".shoppingCartImg",
     controlRenderShoLi: ".listEntryContainer",
     controlRenderProduct: ".card",
+    controlLoadDb: ".menuMyDealer",
   };
   _data;
 
