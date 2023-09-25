@@ -10,6 +10,7 @@ export const state = {
   },
   product: {
     id: null,
+    bookmarked: false,
   },
   shoppingCart: [{ Lidl: [] }, { Beka: [] }],
   bookmarks: {
@@ -38,7 +39,9 @@ export const loadDealerList = function () {
 };
 
 export const loadProductList = function () {
-  state.product = shoppinglistView.loadProductList();
+  const list = shoppinglistView.loadProductList();
+  // list.forEach((el) => (el.bookmarked = false));
+  state.product = list;
 };
 
 export const addBookmark = function (data) {

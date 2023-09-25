@@ -10,8 +10,10 @@ import productView from "./views/productView";
 import menuView from "./views/menuView.js";
 
 const controlBackToDB = function () {
-  controlLoadDb();
-  headerView.movementHeader();
+  DashboardView.render(model.state.dealer);
+  headerView.movementCartLogo();
+  model.loadID();
+  headerView.resetHeader();
 };
 
 const controlMenu = function () {
@@ -32,8 +34,8 @@ const controlAddToShoppingCart = function () {
 const controlLoadDb = function () {
   model.loadDealerList();
   DashboardView.render(model.state.dealer);
-  DashboardView.addHandlerRender(controlRenderShoLi);
   model.loadID();
+  DashboardView.addHandlerRender(controlRenderShoLi);
 };
 
 const controlClickBack = function () {

@@ -25,6 +25,11 @@ class HeaderView extends View {
     this._title.innerHTML = markup;
     this._showAndHideOP(this._title);
   }
+
+  resetHeader() {
+    this._shoppingCartLogo.classList.add("hidden");
+    this._title.innerHTML = `<span class="t1">Orderlist <span class="t2"> v2.0</span>`;
+  }
 }
 
 export default new HeaderView();

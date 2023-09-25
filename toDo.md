@@ -1,1 +1,4 @@
 - scroll shot at shopping list, back from productView
+- code cleaning
+- header bug fixing, click on "to Dealer" from menu
+- fixing buttons (closest)

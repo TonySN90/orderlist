@@ -6,8 +6,9 @@ export default class View {
   _handlerAndTargets = {
     controlRenderShoCa: ".shoppingCartImg",
     controlRenderShoLi: ".listEntryContainer",
-    controlRenderProduct: ".card",
+    controlRenderProduct: ".shoppingListCard",
     controlLoadDb: ".menuMyDealer",
+    controlLoadID: ".card",
   };
   _data;
 
@@ -25,8 +26,9 @@ export default class View {
     const target = this._handlerAndTargets[handler.name];
     window.addEventListener("click", function (e) {
       const el = e.target.closest(target);
+
       if (!el) return;
-      handler();
+      if (el.dataset) handler();
     });
   }
 
@@ -40,7 +42,10 @@ export default class View {
   }
 
   _showAndHideOP(el) {
-    el.classList.remove("hidden");
+    // if (el.classList === "hidden") el.classList.remove("hidden");
+    el.classList !== "hidden"
+      ? el.classList.remove("hidden")
+      : el.classList.add("hidden");
     el.style.opacity = "0";
     el.style.transition = "opacity 0.2s";
     setTimeout(() => {

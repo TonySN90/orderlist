@@ -12,14 +12,16 @@ class ShoppinglistView extends View {
 
   _generateMarkup() {
     const dealer = this._data.dealer.find(
-      (dealer) => dealer.id === +this._data.dealer.id
+      (el) => el.id === +this._data.dealer.id
     );
 
     this._products = dealer.products;
 
     const generateCard = dealer.products.map((data) => {
       return `
-      <li class="card" data-id="${data.id}" data-card="product">
+      <li class="card shoppingListCard" data-id="${
+        data.id
+      }" data-card="product">
         <div class="listEntry cardEntry"" >
           <div>
             <p class="cardTitle">${data.name}</p>

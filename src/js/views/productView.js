@@ -32,12 +32,10 @@ class ProductView extends View {
   }
 
   _generateMarkup() {
-    // console.log(product.bookmarked);
     const product = this._data.product.find(
       (pro) => pro.id === +this._data.product.id
     );
 
-    console.log(product);
     const markup = `
     <div class="productView">
     <div class="productImgSection">
