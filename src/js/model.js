@@ -52,11 +52,16 @@ export const addBookmark = function (data) {
 const findEl = (data) => data.find((el) => el.id === +data.id);
 
 export const addProductToCart = function (data) {
-  const product = findEl(data.product);
   const dealer = findEl(data.dealer);
+  const product = findEl(data.product);
+  const productFull = {
+    ...product,
+    quantity: state.quantityNumber,
+  };
 
   state.shoppingCart.forEach((cart) => {
-    cart[dealer.name]?.push(product);
+    cart[dealer.name]?.push(productFull);
+    console.log(cart);
   });
 };
 

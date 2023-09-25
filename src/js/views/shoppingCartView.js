@@ -18,7 +18,7 @@ class ShoppingCart extends View {
       return `
       <li>
         <div class="listProductName">${el.name}</div>
-        <div class="listProductQuantity">1</div>
+        <div class="listProductQuantity">${el.quantity}</div>
         <div class="listProductUnit">${el.unit}</div>
         <div class="listTrashButton"></div>
       </li>`;
