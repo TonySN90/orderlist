@@ -61,7 +61,6 @@ export const addProductToCart = function (data) {
 
   state.shoppingCart.forEach((cart) => {
     cart[dealer.name]?.push(productFull);
-    console.log(cart);
   });
 };
 

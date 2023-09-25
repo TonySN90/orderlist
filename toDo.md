@@ -1,4 +1,12 @@
 - scroll shot at shopping list, back from productView
 - code cleaning
-- header bug fixing, click on "to Dealer" from menu
 - fixing buttons (closest)
+- Description productList
+- menu elaboration
+- cart symbol (active) in shoppingList
+- product sorting in shoppingListView
+- footer name bug fixing
+
+- ADD dealer
+- ADD Product
+- effects
