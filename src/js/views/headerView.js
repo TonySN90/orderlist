@@ -5,10 +5,26 @@ import View from "./View.js";
 class HeaderView extends View {
   _parentElementHeader = document.querySelector("#overview");
   _shoppingCartLogo = document.querySelector(".shoppingCartImg");
+  _backButtonHeader = document.querySelector(".arrBackHeader");
   _title = document.querySelector(".title");
+
+  addHandlerBack(handler) {
+    this._backButtonHeader.addEventListener(
+      "click",
+      function () {
+        handler();
+        // this._backButtonHeader.classList.add("hidden");
+        this._showAndHideOP(this._backButtonHeader, true);
+      }.bind(this)
+    );
+  }
 
   movementCartLogo() {
     this._showAndHideOP(this._shoppingCartLogo);
+  }
+
+  movementArrowBackHeader() {
+    this._showAndHideOP(this._backButtonHeader);
   }
 
   movementHeader() {
@@ -20,7 +36,7 @@ class HeaderView extends View {
   changeOverviewTitle(dealerArr, open) {
     const dealer = dealerArr.find((id) => +dealerArr.id === id.id);
 
-    const openCart = open ? "Warenkorb" : "Was brauchst du?";
+    const openCart = open ? "Warenkorb" : "Ordersatz";
     const markup = `<span class="t4">${openCart} <span class="t3">// ${dealer.name}</span>`;
     this._title.innerHTML = markup;
     this._showAndHideOP(this._title);

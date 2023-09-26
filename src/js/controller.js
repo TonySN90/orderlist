@@ -9,6 +9,10 @@ import headerView from "./views/headerView";
 import productView from "./views/productView";
 import menuView from "./views/menuView.js";
 
+// const controlBackShoLi = function () {
+//   controlRenderShoLi();
+// };
+
 const controlBackToDB = function () {
   DashboardView.render(model.state.dealer);
   headerView.movementCartLogo();
@@ -29,6 +33,7 @@ const controlAddToShoppingCart = function () {
   model.addProductToCart(model.state);
   controlRenderShoLi();
   headerView.movementHeader();
+  // productView.markCard();
 };
 
 const controlLoadDb = function () {
@@ -67,6 +72,8 @@ const controlRenderProduct = function (operator) {
 const controlRenderShoCa = function () {
   shoppingCartView.render(model.state);
   headerView.changeOverviewTitle(model.state.dealer, true);
+  headerView.movementArrowBackHeader();
+  headerView.addHandlerBack(controlClickBack);
 };
 
 const init = function () {

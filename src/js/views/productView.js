@@ -31,6 +31,10 @@ class ProductView extends View {
     });
   }
 
+  markCard() {
+    console.log(this._data);
+  }
+
   _generateMarkup() {
     const product = this._data.product.find(
       (pro) => pro.id === +this._data.product.id

@@ -10,6 +10,7 @@ export default class View {
     controlLoadDb: ".menuMyDealer",
     controlLoadID: ".card",
   };
+
   _data;
 
   render(data) {
@@ -41,11 +42,16 @@ export default class View {
     this._parentElementBody.insertAdjacentHTML("afterbegin", markup);
   }
 
-  _showAndHideOP(el) {
-    // if (el.classList === "hidden") el.classList.remove("hidden");
-    el.classList !== "hidden"
-      ? el.classList.remove("hidden")
-      : el.classList.add("hidden");
+  _showAndHideOP(el, shown) {
+    // el.classList === "hidden"
+    //   ? el.classList.add("hidden")
+    //   : el.classList.remove("hidden");
+
+    if (el.className === "hidden") el.classList.add("hidden");
+    if (el.className !== "hidden") el.classList.remove("hidden");
+
+    if (shown) el.classList.add("hidden");
+
     el.style.opacity = "0";
     el.style.transition = "opacity 0.2s";
     setTimeout(() => {

@@ -4,8 +4,11 @@
 - Description productList
 - menu elaboration
 - cart symbol (active) in shoppingList
+- back arrow in shopping list
 - product sorting in shoppingListView
 - footer name bug fixing
+- build and implement spinner
+- refurbish back logic
 
 - ADD dealer
 - ADD Product
