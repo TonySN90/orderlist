@@ -33,6 +33,7 @@ const controlAddToShoppingCart = function () {
   model.addProductToCart(model.state);
   controlRenderShoLi();
   headerView.movementHeader();
+  console.log(model.state.shoppingCart);
   // productView.markCard();
 };
 

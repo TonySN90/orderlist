@@ -39,9 +39,9 @@ export const loadDealerList = function () {
 };
 
 export const loadProductList = function () {
-  const list = shoppinglistView.loadProductList();
+  const productList = shoppinglistView.loadProductList();
   // list.forEach((el) => (el.bookmarked = false));
-  state.product = list;
+  state.product = productList;
 };
 
 export const addBookmark = function (data) {

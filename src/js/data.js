@@ -289,7 +289,7 @@ export const productsBeka = [
   {
     id: 2001,
     name: "Paprikastreifen",
-    unit: "2,5kg",
+    unit: "Tüte",
     category: "vegAndFruit",
     image_src:
       "https://static.hanos.com/sys-master/productimages/h1b/hae/10321804492830/914Wx914H_null",
@@ -297,7 +297,7 @@ export const productsBeka = [
   {
     id: 2002,
     name: "Apfelsegmente",
-    unit: "2,5kg",
+    unit: "Tüte",
     category: "vegAndFruit",
     image_src:
       "https://www.darta.com/sites/default/files/styles/packaging_image/public/packaging-images/81215199.jpg?itok=NFQIxugE",
@@ -305,7 +305,7 @@ export const productsBeka = [
   {
     id: 2003,
     name: "Pommes kc",
-    unit: "2,5kg",
+    unit: "Tüte",
     category: "frozen",
     image_src:
       "https://www.avikofoodservice.com/_next/image?url=https%3A%2F%2Faviko-eu.s3.eu-west-2.amazonaws.com%2Fgroup%2F2022-07%2F322525%2520Aviko%2520Pommes%2520Frites%2520Crinkle%25202500g.png&w=1440&q=100",
@@ -313,7 +313,7 @@ export const productsBeka = [
   {
     id: 2004,
     name: "Herzogin",
-    unit: "2,5kg",
+    unit: "Tüte",
     category: "frozen",
     image_src:
       "https://d40toz3wdlpr6.cloudfront.net/medias/sys_master/root/h45/h09/9251190177822/1859986-01.jpg",
@@ -321,7 +321,7 @@ export const productsBeka = [
   {
     id: 2005,
     name: "Spinat TK",
-    unit: "2,5kg",
+    unit: "Tüte",
     category: "frozen",
     image_src:
       "https://d40toz3wdlpr6.cloudfront.net/medias/sys_master/root/h00/h3c/8971357585438/2200465-01.jpg",
@@ -330,7 +330,7 @@ export const productsBeka = [
   {
     id: 2006,
     name: "Erbsen TK",
-    unit: "2,5kg",
+    unit: "Tüte",
     category: "frozen",
     image_src:
       "https://d40toz3wdlpr6.cloudfront.net/medias/sys_master/root/hfd/hed/8971553669150/2200198-01.jpg",
@@ -338,7 +338,7 @@ export const productsBeka = [
   {
     id: 2007,
     name: "Röstis",
-    unit: "2,5kg",
+    unit: "Tüte",
     category: "frozen",
     image_src:
       "https://d40toz3wdlpr6.cloudfront.net/medias/sys_master/root/heb/hce/9251192930334/660590-01.jpg",
@@ -386,7 +386,7 @@ export const productsBeka = [
   {
     id: 2013,
     name: "Mett TK",
-    unit: "stk",
+    unit: "Rolle",
     category: "meat",
     image_src:
       "https://d40toz3wdlpr6.cloudfront.net/medias/sys_master/root/h2d/h79/8982004367390/2139618-01.jpg",

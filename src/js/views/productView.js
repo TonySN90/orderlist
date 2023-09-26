@@ -1,8 +1,6 @@
 "use strict";
 
-import * as model from "../model.js";
 import View from "./View.js";
-import headerView from "./headerView.js";
 
 class ProductView extends View {
   _backButton;
@@ -31,14 +29,17 @@ class ProductView extends View {
     });
   }
 
-  markCard() {
-    console.log(this._data);
-  }
+  // markCard() {
+  //   console.log(this._data);
+  // }
 
   _generateMarkup() {
     const product = this._data.product.find(
       (pro) => pro.id === +this._data.product.id
     );
+
+    // const units = this._data;
+    console.log(this._data);
 
     const markup = `
     <div class="productView">
@@ -59,7 +60,18 @@ class ProductView extends View {
         <h1>${product.name}</h1>
         <div class="units">
           <div class="unitSelection">
-            <h3>Netz</h3>
+            <h3>${product.unit}</h3>
+            <div class="buttonArrowDown ">
+              <div class="arrLeft arrBoth"></div>
+              <div class="arrRight arrBoth"></div>
+            </div>
+            <div class="unitSelectList">
+            <ul>
+              <li>Tüte</li>
+              <li>Thorsten</li>
+              <li>Karton</li>
+            </ul>
+          </div>
           </div>
           <div class="quantityContainer">
             <div class="quanMinus quanButton">
