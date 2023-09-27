@@ -14,7 +14,6 @@ const controlBackToDB = function () {
   headerView.movementCartLogo();
   model.loadID();
   headerView.resetHeader();
-  // headerView.movementArrowBackHeader();
 };
 
 const controlMenu = function () {
@@ -30,7 +29,7 @@ const controlAddToShoppingCart = function () {
   model.addProductToCart(model.state);
   controlRenderShoLi();
   headerView.movementHeader();
-  console.log(model.state.shoppingCart);
+  // console.log(model.state.shoppingCart);
 };
 
 const controlLoadDb = function () {

@@ -60,13 +60,31 @@ const findEl = (data) => data.find((el) => el.id === +data.id);
 export const addProductToCart = function (data) {
   const dealer = findEl(data.dealer);
   const product = findEl(data.product);
+  // console.log(product);
   const productFull = {
     ...product,
     quantity: state.quantityNumber,
   };
 
+  // state.shoppingCart.forEach((cart) => {
+  //   cart[dealer.name]?.push(productFull);
+  // });
+
   state.shoppingCart.forEach((cart) => {
-    cart[dealer.name]?.push(productFull);
+    if (!cart[dealer.name]) {
+      cart[dealer.name] = [productFull];
+    } else {
+      const index = cart[dealer.name].findIndex(
+        (product) => product.id === productFull.id
+      );
+      // console.log(index);
+      if (index !== -1) {
+        cart[dealer.name][index] = productFull;
+        console.log(index);
+      } else {
+        cart[dealer.name].push(productFull);
+      }
+    }
   });
 };
 

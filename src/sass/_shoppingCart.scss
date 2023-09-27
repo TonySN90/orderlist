@@ -1,18 +1,29 @@
-.cartList {
+.cartListContainer {
   width: 320px;
   margin: 0.5rem auto 0 auto;
 }
 
-.cartList ul {
+.cartListContainer ul {
   list-style: none;
   padding: 0;
 }
 
-.cartList ul li {
+.cartListContainer ul li {
+  height: 2rem;
+  padding-top: 0.2rem;
   display: flex;
   justify-content: space-between;
   margin: 0.1rem 0 0.1rem 0;
+  border-bottom: 1px solid #ffffff29;
 }
+
+.cartListContainer ul :last-child {
+  border-bottom: none;
+}
+
+// .cartList :nth-child(1) {
+//   background-color: $color-bg-lite;
+// }
 
 .listTrashButton {
   width: 1rem;
@@ -36,6 +47,6 @@
   width: 5%;
 }
 
-.marked {
-  background-color: $orangeLite;
-}
+// .marked {
+//   background-color: $orangeLite;
+// }

@@ -46,7 +46,7 @@ export let productsLidl = [
   {
     id: 1006,
     name: "Paprika",
-    unit: "stk",
+    unit: "Stück",
     category: "vegAndFruit",
     image_src:
       "https://img.rewe-static.de/0293205/8578590_digital-image.png?impolicy=s-offers&imwidth=200&output-format=image/webp",
@@ -102,7 +102,7 @@ export let productsLidl = [
   {
     id: 1013,
     name: "Ingwer",
-    unit: "stk",
+    unit: "Stück",
     category: "vegAndFruit",
     image_src:
       "https://img.rewe-static.de/5222060/8945760_digital-image.png?impolicy=s-offers&imwidth=200&output-format=image/webp",
@@ -142,7 +142,7 @@ export let productsLidl = [
   {
     id: 1018,
     name: "Butter",
-    unit: "stk",
+    unit: "Stück",
     category: "whey",
     image_src:
       "https://img.rewe-static.de/4530594/1092510_digital-image.png?impolicy=s-offers&imwidth=200&output-format=image/webp",
@@ -150,7 +150,7 @@ export let productsLidl = [
   {
     id: 1019,
     name: "Speisestärke",
-    unit: "stk",
+    unit: "Stück",
     category: "other",
     image_src:
       "https://img.rewe-static.de/7079648/7477540_digital-image.png?impolicy=s-offers&imwidth=200&output-format=image/webp",
@@ -254,7 +254,7 @@ export let productsLidl = [
   {
     id: 1034,
     name: "Zitronensaft",
-    unit: "stk",
+    unit: "Stück",
     category: "other",
     image_src:
       "https://img.rewe-static.de/0546552/34100990_digital-image.png?impolicy=s-offers&imwidth=200&output-format=image/webp",
@@ -278,7 +278,7 @@ export let productsLidl = [
   {
     id: 1037,
     name: "Gefrierbeutel",
-    unit: "stk",
+    unit: "Stück",
     category: "other",
     image_src:
       "https://img.rewe-static.de/2383246/29944181_digital-image.png?impolicy=s-offers&imwidth=200&output-format=image/webp",
@@ -354,7 +354,7 @@ export const productsBeka = [
   {
     id: 2009,
     name: "Pute",
-    unit: "stk",
+    unit: "Stück",
     category: "meat",
     image_src:
       "https://d40toz3wdlpr6.cloudfront.net/medias/sys_master/root/h26/hd2/8980644691998/892319-01.jpg",
@@ -362,7 +362,7 @@ export const productsBeka = [
   {
     id: 2010,
     name: "Schweinelachs",
-    unit: "stk",
+    unit: "Stück",
     category: "meat",
     image_src:
       "https://d40toz3wdlpr6.cloudfront.net/medias/sys_master/root/h65/hde/8980602093598/852880-01.jpg",
@@ -370,7 +370,7 @@ export const productsBeka = [
   {
     id: 2011,
     name: "Schweineschulter",
-    unit: "stk",
+    unit: "Stück",
     category: "meat",
     image_src:
       "https://d40toz3wdlpr6.cloudfront.net/medias/sys_master/root/hc4/h92/8970876420126/890251-01.jpg",
@@ -378,7 +378,7 @@ export const productsBeka = [
   {
     id: 2012,
     name: "Speck gewürfelt",
-    unit: "stk",
+    unit: "Stück",
     category: "meat",
     image_src:
       "https://d40toz3wdlpr6.cloudfront.net/medias/sys_master/root/h5f/h3d/8980460339230/1274163-01.jpg",

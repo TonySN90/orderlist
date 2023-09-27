@@ -26,8 +26,8 @@ class ShoppingCart extends View {
 
     const markup = `
     <div class="shoppingCartArea">
-      <div class="cartList">
-        <ul>
+      <div class="cartListContainer">
+        <ul class="cartList">
             ${cart.join("")}
         </ul>
       </div>
