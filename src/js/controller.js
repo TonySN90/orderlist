@@ -14,6 +14,7 @@ const controlBackToDB = function () {
   headerView.movementCartLogo();
   model.loadID();
   headerView.resetHeader();
+  // headerView.movementArrowBackHeader();
 };
 
 const controlMenu = function () {
@@ -30,7 +31,6 @@ const controlAddToShoppingCart = function () {
   controlRenderShoLi();
   headerView.movementHeader();
   console.log(model.state.shoppingCart);
-  // productView.markCard();
 };
 
 const controlLoadDb = function () {

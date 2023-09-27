@@ -13,7 +13,6 @@ class HeaderView extends View {
       "click",
       function () {
         handler();
-        // this._backButtonHeader.classList.add("hidden");
         this._showAndHideOP(this._backButtonHeader, true);
       }.bind(this)
     );
@@ -45,6 +44,7 @@ class HeaderView extends View {
   resetHeader() {
     this._shoppingCartLogo.classList.add("hidden");
     this._title.innerHTML = `<span class="t1">Orderlist <span class="t2"> v2.0</span>`;
+    this._backButtonHeader.classList.add("hidden");
   }
 }
 
