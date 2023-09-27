@@ -43,14 +43,13 @@ export default class View {
   }
 
   _showAndHideOP(el, shown) {
-    // el.classList === "hidden"
-    //   ? el.classList.add("hidden")
-    //   : el.classList.remove("hidden");
-
-    if (el.className === "hidden") el.classList.add("hidden");
-    if (el.className !== "hidden") el.classList.remove("hidden");
+    // if (el.className === "hidden") el.classList.add("hidden");
+    // if (el.className !== "hidden") el.classList.remove("hidden");
 
     if (shown) el.classList.add("hidden");
+    if (!shown) el.classList.remove("hidden");
+
+    // if ("toggle") el.classList.toggle("hidden");
 
     el.style.opacity = "0";
     el.style.transition = "opacity 0.2s";

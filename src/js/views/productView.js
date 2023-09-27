@@ -9,6 +9,8 @@ class ProductView extends View {
   _quanContainer;
   _heartButton;
   _addButton;
+  _unitValue;
+  unitValueReturn;
 
   addHandlerAddBookmark(handler) {
     this._heartButton.addEventListener("click", handler);
@@ -29,17 +31,40 @@ class ProductView extends View {
     });
   }
 
-  // markCard() {
-  //   console.log(this._data);
+  addHandlerSelectUnit(handler) {
+    this._unitButton.addEventListener("click", handler);
+  }
+  displayUnitSelectList() {
+    document
+      .querySelector(".unitSelectListContainer")
+      .classList.toggle("hidden");
+
+    // this._showAndHideOP(this._unitSelectList, "toggle");
+  }
+
+  // _closeUnitList() {
+  //   console.log(test);
+  //   document.querySelector(".unitSelectListContainer").classList.add("hidden");
   // }
+
+  selectUnit() {
+    const unitListItems = this._unitSelectList.querySelectorAll("li");
+    unitListItems.forEach((item) => {
+      item.addEventListener("click", (e) => {
+        this._unitValue.innerHTML = e.target.innerHTML;
+        this.unitValueReturn = e.target.innerHTML;
+      });
+    });
+  }
 
   _generateMarkup() {
     const product = this._data.product.find(
       (pro) => pro.id === +this._data.product.id
     );
 
-    // const units = this._data;
-    console.log(this._data);
+    const units = this._data.units.map((unit) => {
+      return `<li>${unit}</li>`;
+    });
 
     const markup = `
     <div class="productView">
@@ -60,17 +85,15 @@ class ProductView extends View {
         <h1>${product.name}</h1>
         <div class="units">
           <div class="unitSelection">
-            <h3>${product.unit}</h3>
+            <h3 class="unitValue">${product.unit}</h3>
             <div class="buttonArrowDown ">
               <div class="arrLeft arrBoth"></div>
               <div class="arrRight arrBoth"></div>
             </div>
-            <div class="unitSelectList">
-            <ul>
-              <li>Tüte</li>
-              <li>Thorsten</li>
-              <li>Karton</li>
-            </ul>
+            <div class="unitSelectListContainer hidden">
+              <ul class="unitSelectList">
+                ${units.join("")}
+              </ul>
           </div>
           </div>
           <div class="quantityContainer">
@@ -105,14 +128,10 @@ class ProductView extends View {
     this._quanContainer = document.querySelector(".quantityContainer");
     this._heartButton = document.querySelector(".heartBtn");
     this._addButton = document.querySelector(".addButton");
+    this._unitButton = document.querySelector(".unitSelection");
+    this._unitSelectList = document.querySelector(".unitSelectListContainer");
+    this._unitValue = document.querySelector(".unitValue");
   }
 }
 
 export default new ProductView();
-
-// {/* <p>
-// Lorem ipsum dolor sit amet consectetur adipisicing elit.
-// Distinctio, assumenda eius amet, eum error sunt officiis iure
-// quas dignissimos itaque, quo ut veritatis necessitatibus quia
-// possimus. Sit ex dolore sed.
-// </p> */}

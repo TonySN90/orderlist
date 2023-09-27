@@ -1,7 +1,7 @@
 "use strict";
 
 import { API_KEY, API_URL } from "./config";
-import { dataDealer } from "./data";
+import { dataDealer, unitList } from "./data";
 import shoppinglistView from "./views/shoppinglistView";
 
 export const state = {
@@ -36,12 +36,18 @@ export const resetQuantityNumber = function () {
 
 export const loadDealerList = function () {
   state.dealer = dataDealer;
+  state.units = unitList;
 };
 
 export const loadProductList = function () {
   const productList = shoppinglistView.loadProductList();
   // list.forEach((el) => (el.bookmarked = false));
   state.product = productList;
+};
+
+export const addUnitToProduct = function (unit) {
+  const product = state.product.find((el) => el.id === +state.product.id);
+  product.unit = unit;
 };
 
 export const addBookmark = function (data) {

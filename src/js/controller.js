@@ -9,10 +9,6 @@ import headerView from "./views/headerView";
 import productView from "./views/productView";
 import menuView from "./views/menuView.js";
 
-// const controlBackShoLi = function () {
-//   controlRenderShoLi();
-// };
-
 const controlBackToDB = function () {
   DashboardView.render(model.state.dealer);
   headerView.movementCartLogo();
@@ -49,6 +45,12 @@ const controlClickBack = function () {
   headerView.movementHeader();
 };
 
+const controlUnitSelectList = function () {
+  productView.displayUnitSelectList();
+  productView.selectUnit();
+  model.addUnitToProduct(productView.unitValueReturn);
+};
+
 const controlRenderShoLi = function () {
   model.resetQuantityNumber();
   ShoppinglistView.render(model.state);
@@ -68,6 +70,7 @@ const controlRenderProduct = function (operator) {
   productView.addHandlerChangeQuantity(controlRenderProduct);
   productView.addHandlerAddBookmark(controlAddBookmark);
   productView.AddToShoppingCart(controlAddToShoppingCart);
+  productView.addHandlerSelectUnit(controlUnitSelectList);
 };
 
 const controlRenderShoCa = function () {
