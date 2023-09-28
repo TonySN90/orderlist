@@ -8,10 +8,16 @@ class ShoppingCart extends View {
   _parentElementTrash;
   product;
 
-  addHandlerDeleteProduct(handler) {
+  addHandlerDeleteProduct(del, change) {
     this._parentElementTrash.addEventListener("click", (e) => {
       this.product = e.target.parentElement.dataset.id;
-      if (e.target.className === "listTrashButton") handler();
+      if (e.target.className === "listTrashButton") del();
+      if (
+        e.target.className === "listProductName" ||
+        e.target.className === "listProductQuantity" ||
+        e.target.className === "listProductUnit"
+      )
+        change(this.product);
       else return;
     });
   }

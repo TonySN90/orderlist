@@ -83,12 +83,30 @@ const controlRenderProduct = function (operator) {
   productView.addHandlerSelectUnit(controlUnitSelectList);
 };
 
+const controlBackToPV = function (productID) {
+  // model.load(productID);
+  model.state.product.id = productID;
+  ProductView.render(model.state);
+  ProductView.addHandlerBack(controlClickBack);
+  headerView.movementHeader();
+  productView.addHandlerChangeQuantity(controlRenderProduct);
+  productView.addHandlerAddBookmark(controlAddBookmark);
+  productView.AddToShoppingCart(controlAddToShoppingCart);
+  productView.addHandlerSelectUnit(controlUnitSelectList);
+  headerView.resetHeader();
+
+  // ÜBERARBEITEN
+};
+
 const controlRenderShoCa = function () {
   shoppingCartView.render(model.state);
   headerView.changeOverviewTitle(model.state.dealer, true);
   headerView.movementArrowBackHeader();
   headerView.addHandlerBack(controlClickBack);
-  shoppingCartView.addHandlerDeleteProduct(controlDeleteProduct);
+  shoppingCartView.addHandlerDeleteProduct(
+    controlDeleteProduct,
+    controlBackToPV
+  );
   // controlDeleteProduct();
 };
 

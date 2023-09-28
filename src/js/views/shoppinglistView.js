@@ -10,6 +10,14 @@ class ShoppinglistView extends View {
     return this._products;
   }
 
+  generateID() {
+    const parentElement = document.querySelector(".cards");
+    parentElement.addEventListener("click", function (e) {
+      const id = e.target.closest(".card").dataset.id;
+      return id;
+    });
+  }
+
   _generateMarkup() {
     const dealer = this._data.dealer.find(
       (el) => el.id === +this._data.dealer.id
@@ -63,14 +71,6 @@ class ShoppinglistView extends View {
     </div>`;
 
     this._insertHTML(markup);
-  }
-
-  generateID() {
-    const parentElement = document.querySelector(".cards");
-    parentElement.addEventListener("click", function (e) {
-      const id = e.target.closest(".card").dataset.id;
-      return id;
-    });
   }
 }
 
