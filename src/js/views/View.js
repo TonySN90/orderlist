@@ -16,10 +16,7 @@ export default class View {
   render(data) {
     if (data) {
       this._data = data;
-      // const markup = this._generateMarkup();
       this._generateMarkup();
-
-      // this._insertHTML(markup);
     }
   }
 

@@ -12,7 +12,8 @@ export const state = {
     id: null,
     bookmarked: false,
   },
-  shoppingCart: [{ Lidl: [] }, { Beka: [] }],
+  // shoppingCart: [{ Lidl: [] }, { Beka: [] }],
+  shoppingCart: [],
   bookmarks: {
     Lidl: [],
     Beka: [],
@@ -57,35 +58,38 @@ export const addBookmark = function (data) {
 
 const findEl = (data) => data.find((el) => el.id === +data.id);
 
+export const createShoppingCart = function (data) {
+  state.dealer.forEach((dealer) => {
+    state.shoppingCart.push({ [dealer.name]: [] });
+  });
+};
+
 export const addProductToCart = function (data) {
   const dealer = findEl(data.dealer);
   const product = findEl(data.product);
-  // console.log(product);
+
   const productFull = {
     ...product,
     quantity: state.quantityNumber,
   };
 
-  // state.shoppingCart.forEach((cart) => {
-  //   cart[dealer.name]?.push(productFull);
-  // });
-
   state.shoppingCart.forEach((cart) => {
-    if (!cart[dealer.name]) {
-      cart[dealer.name] = [productFull];
-    } else {
-      const index = cart[dealer.name].findIndex(
+    if (cart[dealer.name]) {
+      const productIndex = cart[dealer.name].findIndex(
         (product) => product.id === productFull.id
       );
-      // console.log(index);
-      if (index !== -1) {
-        cart[dealer.name][index] = productFull;
-        console.log(index);
+      if (productIndex !== -1) {
+        cart[dealer.name][productIndex] = productFull;
       } else {
         cart[dealer.name].push(productFull);
       }
     }
   });
+};
+
+export const deleteProduct = function (id) {
+  const cartProductID = findEl(state.shoppingCart);
+  console.log(state.shoppingCart);
 };
 
 export const loadID = function (data) {

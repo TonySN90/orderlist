@@ -32,10 +32,15 @@ const controlAddToShoppingCart = function () {
   // console.log(model.state.shoppingCart);
 };
 
+const controlDeleteProduct = function () {
+  model.deleteProduct(shoppingCartView.product);
+};
+
 const controlLoadDb = function () {
   model.loadDealerList();
   DashboardView.render(model.state.dealer);
   model.loadID();
+  model.createShoppingCart();
   DashboardView.addHandlerRender(controlRenderShoLi);
 };
 
@@ -77,6 +82,8 @@ const controlRenderShoCa = function () {
   headerView.changeOverviewTitle(model.state.dealer, true);
   headerView.movementArrowBackHeader();
   headerView.addHandlerBack(controlClickBack);
+  shoppingCartView.addHandlerDeleteProduct(controlDeleteProduct);
+  // controlDeleteProduct();
 };
 
 const init = function () {

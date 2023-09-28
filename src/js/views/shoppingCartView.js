@@ -3,8 +3,20 @@
 import View from "./View.js";
 
 class ShoppingCart extends View {
-  _backButton;
+  // _backButton;
   header = document.querySelector("#header");
+  _parentElementTrash;
+  product;
+
+  addHandlerDeleteProduct(handler) {
+    this._parentElementTrash.addEventListener(
+      "click",
+      function (e) {
+        this.product = e.target.parentElement.dataset.id;
+        handler();
+      }.bind(this)
+    );
+  }
 
   _generateMarkup() {
     const findEl = (data) => data.find((el) => el.id === +data.id);
@@ -16,7 +28,7 @@ class ShoppingCart extends View {
 
     const cart = dealerCart[dealer.name].map((el) => {
       return `
-      <li>
+      <li data-id="${el.id}">
         <div class="listProductName">${el.name}</div>
         <div class="listProductQuantity">${el.quantity}</div>
         <div class="listProductUnit">${el.unit}</div>
@@ -35,6 +47,7 @@ class ShoppingCart extends View {
     `;
 
     this._insertHTML(markup);
+    this._parentElementTrash = document.querySelector(".cartList");
   }
 }
 

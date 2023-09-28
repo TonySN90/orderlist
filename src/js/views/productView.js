@@ -34,6 +34,7 @@ class ProductView extends View {
   addHandlerSelectUnit(handler) {
     this._unitButton.addEventListener("click", handler);
   }
+
   displayUnitSelectList() {
     document
       .querySelector(".unitSelectListContainer")
@@ -42,17 +43,11 @@ class ProductView extends View {
     // this._showAndHideOP(this._unitSelectList, "toggle");
   }
 
-  // _closeUnitList() {
-  //   console.log(test);
-  //   document.querySelector(".unitSelectListContainer").classList.add("hidden");
-  // }
-
   selectUnit() {
     const unitListItems = this._unitSelectList.querySelectorAll("li");
     unitListItems.forEach((item) => {
       item.addEventListener("click", (e) => {
-        this._unitValue.innerHTML = e.target.innerHTML;
-        this.unitValueReturn = e.target.innerHTML;
+        this._unitValue.innerHTML = this.unitValueReturn = e.target.innerHTML;
       });
     });
   }
