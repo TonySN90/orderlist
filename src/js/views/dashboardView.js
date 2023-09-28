@@ -4,6 +4,7 @@ import View from "./View.js";
 
 class DashboardView extends View {
   _headerDealerTitle = document.querySelector(".headerDealerTitle");
+  // dealerName;
 
   addHandlerLoadDb(handler) {
     window.addEventListener("load", handler);
@@ -12,7 +13,7 @@ class DashboardView extends View {
   _generateMarkup() {
     const generateDealer = this._data.map((dealer) => {
       return `
-      <li class="card listEntryContainer" data-id="${dealer.id}" data-card="dealer">
+      <li class="card listEntryContainer" data-name="${dealer.name}" data-id="${dealer.id}" data-card="dealer">
       <div class="listEntry">
         <p class="pTitle">${dealer.name}</p>
         <div class="dealerLogo">
@@ -61,17 +62,3 @@ class DashboardView extends View {
 }
 
 export default new DashboardView();
-
-// { <li class="card listEntryContainer">
-//   <div class="listEntry">
-//     <p class="pTitle">Lidl</p>
-//     <div class="dealerLogo">
-//       <img
-//         src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Lidl-Logo.svg/60px-Lidl-Logo.svg.png"
-//         alt="Lidl logo"
-//       />
-//     </div>
-//     <p class="pLastUse">letzte Bestellung:</p>
-//     <p class="pDate">12.09.2023 - 20:15</p>
-//   </div>
-// </li>; }

@@ -9,13 +9,11 @@ class ShoppingCart extends View {
   product;
 
   addHandlerDeleteProduct(handler) {
-    this._parentElementTrash.addEventListener(
-      "click",
-      function (e) {
-        this.product = e.target.parentElement.dataset.id;
-        handler();
-      }.bind(this)
-    );
+    this._parentElementTrash.addEventListener("click", (e) => {
+      this.product = e.target.parentElement.dataset.id;
+      if (e.target.className === "listTrashButton") handler();
+      else return;
+    });
   }
 
   _generateMarkup() {

@@ -22,12 +22,15 @@ export default class View {
 
   addHandlerRender(handler) {
     const target = this._handlerAndTargets[handler.name];
-    window.addEventListener("click", function (e) {
-      const el = e.target.closest(target);
+    window.addEventListener(
+      "click",
+      function (e) {
+        const el = e.target.closest(target);
 
-      if (!el) return;
-      if (el.dataset) handler();
-    });
+        if (!el) return;
+        if (el.dataset) handler();
+      }.bind(this)
+    );
   }
 
   _clear() {

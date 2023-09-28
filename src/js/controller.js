@@ -8,11 +8,14 @@ import ShoppinglistView from "./views/shoppinglistView";
 import headerView from "./views/headerView";
 import productView from "./views/productView";
 import menuView from "./views/menuView.js";
+import dashboardView from "./views/dashboardView";
+import View from "./views/View.js";
 
 const controlBackToDB = function () {
   DashboardView.render(model.state.dealer);
   headerView.movementCartLogo();
   model.loadID();
+
   headerView.resetHeader();
 };
 
@@ -34,12 +37,14 @@ const controlAddToShoppingCart = function () {
 
 const controlDeleteProduct = function () {
   model.deleteProduct(shoppingCartView.product);
+  controlRenderShoCa();
 };
 
 const controlLoadDb = function () {
   model.loadDealerList();
   DashboardView.render(model.state.dealer);
   model.loadID();
+  // console.log(dashboardView.dealerName);
   model.createShoppingCart();
   DashboardView.addHandlerRender(controlRenderShoLi);
 };
@@ -63,6 +68,7 @@ const controlRenderShoLi = function () {
   headerView.movementCartLogo();
   headerView.changeOverviewTitle(model.state.dealer);
   model.loadID(model.state);
+  model.loadCurDealer();
   model.loadProductList();
 };
 

@@ -12,7 +12,6 @@ export const state = {
     id: null,
     bookmarked: false,
   },
-  // shoppingCart: [{ Lidl: [] }, { Beka: [] }],
   shoppingCart: [],
   bookmarks: {
     Lidl: [],
@@ -42,7 +41,6 @@ export const loadDealerList = function () {
 
 export const loadProductList = function () {
   const productList = shoppinglistView.loadProductList();
-  // list.forEach((el) => (el.bookmarked = false));
   state.product = productList;
 };
 
@@ -88,8 +86,12 @@ export const addProductToCart = function (data) {
 };
 
 export const deleteProduct = function (id) {
-  const cartProductID = findEl(state.shoppingCart);
-  console.log(state.shoppingCart);
+  const dealer = state.shoppingCart.find((dealers) => dealers[state.curDealer]);
+  if (dealer && dealer[state.curDealer]) {
+    dealer[state.curDealer] = dealer[state.curDealer].filter((product) => {
+      return product.id !== +id;
+    });
+  }
 };
 
 export const loadID = function (data) {
@@ -102,8 +104,11 @@ export const loadID = function (data) {
       state.dealer.id = id;
     state.product.id = id;
   });
+};
 
-  // state.curDealer = findEl(data.dealer);
+export const loadCurDealer = function () {
+  const dealer = state.dealer.find((dealer) => +state.dealer.id === dealer.id);
+  state.curDealer = dealer.name;
 };
 
 const timeout = function (s = 2.5) {
