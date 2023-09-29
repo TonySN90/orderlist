@@ -28,11 +28,12 @@ const controlAddBookmark = function () {
   controlRenderProduct();
 };
 
-const controlAddToShoppingCart = function () {
+const controlAddToShoppingCart = function (fromCart) {
   model.addProductToCart(model.state);
-  controlRenderShoLi();
+  console.log(fromCart);
+  if (fromCart) controlRenderShoCa();
+  if (!fromCart) controlRenderShoLi();
   headerView.movementHeader();
-  // console.log(model.state.shoppingCart);
 };
 
 const controlDeleteProduct = function () {
@@ -44,13 +45,13 @@ const controlLoadDb = function () {
   model.loadDealerList();
   DashboardView.render(model.state.dealer);
   model.loadID();
-  // console.log(dashboardView.dealerName);
   model.createShoppingCart();
   DashboardView.addHandlerRender(controlRenderShoLi);
 };
 
-const controlClickBack = function () {
-  controlRenderShoLi();
+const controlClickBack = function (fromCart) {
+  if (fromCart) controlRenderShoCa();
+  if (!fromCart) controlRenderShoLi();
   headerView.movementHeader();
 };
 
@@ -72,9 +73,9 @@ const controlRenderShoLi = function () {
   model.loadProductList();
 };
 
-const controlRenderProduct = function (operator) {
+const controlRenderProduct = function (operator, from = false) {
   model.changeQuantity(operator);
-  ProductView.render(model.state);
+  ProductView.render(model.state, from);
   ProductView.addHandlerBack(controlClickBack);
   headerView.movementHeader();
   productView.addHandlerChangeQuantity(controlRenderProduct);
@@ -86,10 +87,10 @@ const controlRenderProduct = function (operator) {
 const controlBackToPV = function (productID) {
   // model.load(productID);
   model.state.product.id = productID;
-  ProductView.render(model.state);
+  ProductView.render(model.state, true);
   ProductView.addHandlerBack(controlClickBack);
   headerView.movementHeader();
-  productView.addHandlerChangeQuantity(controlRenderProduct);
+  productView.addHandlerChangeQuantity(controlRenderProduct, true);
   productView.addHandlerAddBookmark(controlAddBookmark);
   productView.AddToShoppingCart(controlAddToShoppingCart);
   productView.addHandlerSelectUnit(controlUnitSelectList);
@@ -99,7 +100,7 @@ const controlBackToPV = function (productID) {
 };
 
 const controlRenderShoCa = function () {
-  shoppingCartView.render(model.state);
+  shoppingCartView.render(model.state, false);
   headerView.changeOverviewTitle(model.state.dealer, true);
   headerView.movementArrowBackHeader();
   headerView.addHandlerBack(controlClickBack);
@@ -107,7 +108,6 @@ const controlRenderShoCa = function () {
     controlDeleteProduct,
     controlBackToPV
   );
-  // controlDeleteProduct();
 };
 
 const init = function () {

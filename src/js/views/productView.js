@@ -17,17 +17,24 @@ class ProductView extends View {
   }
 
   AddToShoppingCart(handler) {
-    this._addButton.addEventListener("click", handler);
+    this._addButton.addEventListener("click", () => {
+      if (this._from) handler(true);
+      else handler(false);
+    });
   }
 
   addHandlerBack(handler) {
-    this._backButton.addEventListener("click", handler);
+    this._backButton.addEventListener("click", () => {
+      if (this._from) handler(true);
+      else handler(false);
+    });
   }
 
-  addHandlerChangeQuantity(handler) {
+  addHandlerChangeQuantity(handler, from) {
     this._quanContainer.addEventListener("click", function (e) {
-      if (e.target.closest(".quanPlus")) handler("+");
-      if (e.target.closest(".quanMinus")) handler("-");
+      console.log(from);
+      if (e.target.closest(".quanPlus")) handler("+", from);
+      if (e.target.closest(".quanMinus")) handler("-", from);
     });
   }
 

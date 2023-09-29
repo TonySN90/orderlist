@@ -3,22 +3,24 @@
 import View from "./View.js";
 
 class ShoppingCart extends View {
-  // _backButton;
   header = document.querySelector("#header");
   _parentElementTrash;
   product;
 
   addHandlerDeleteProduct(del, change) {
     this._parentElementTrash.addEventListener("click", (e) => {
-      this.product = e.target.parentElement.dataset.id;
-      if (e.target.className === "listTrashButton") del();
+      let id = e.target.parentElement.dataset.id;
+      this.product = e.target.closest(".listEntryCart").dataset.id;
+
+      if (e.target.className === "trashImg") del();
       if (
         e.target.className === "listProductName" ||
         e.target.className === "listProductQuantity" ||
         e.target.className === "listProductUnit"
-      )
-        change(this.product);
-      else return;
+      ) {
+        // this._from = true;
+        change(id);
+      } else return;
     });
   }
 
@@ -32,7 +34,7 @@ class ShoppingCart extends View {
 
     const cart = dealerCart[dealer.name].map((el) => {
       return `
-      <li data-id="${el.id}">
+      <li class="listEntryCart" data-id="${el.id}">
         <div class="listProductName">${el.name}</div>
         <div class="listProductQuantity">${el.quantity}</div>
         <div class="listProductUnit">${el.unit}</div>

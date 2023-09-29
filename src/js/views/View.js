@@ -12,10 +12,13 @@ export default class View {
   };
 
   _data;
+  _from;
 
-  render(data) {
+  render(data, fromPV = false) {
     if (data) {
       this._data = data;
+      if (fromPV) this._from = fromPV;
+      if (!fromPV) this._from = fromPV;
       this._generateMarkup();
     }
   }
