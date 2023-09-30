@@ -134,6 +134,11 @@
   margin-top: -0.1rem;
 }
 
+.btnTransform {
+  transform: rotate(-90deg) translateX(-0.2rem) translateY(-0.2rem);
+  transition: 0.3s;
+}
+
 .arrBoth {
   background-color: #fff;
   width: 0.8rem;

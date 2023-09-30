@@ -19,6 +19,7 @@ export const state = {
   },
   quantityNumber: 1,
   curDealer: "",
+  curScrollPos: 0,
 };
 
 export const changeQuantity = function (operator) {
@@ -44,9 +45,19 @@ export const loadProductList = function () {
   state.product = productList;
 };
 
-export const addUnitToProduct = function (unit) {
-  const product = state.product.find((el) => el.id === +state.product.id);
-  product.unit = unit;
+// export const addUnitToProduct = function (unit) {
+//   if (!state || !state.product || typeof state.product !== "object") return;
+//   const product = state.product.find((el) => el.id === +state.product.id);
+
+//   if (!product) return;
+//   if (!unit) return;
+//   console.log(unit);
+
+//   product.unit = unit;
+// };
+
+export const resetCurUnit = function () {
+  state.product.unit = "test";
 };
 
 export const addBookmark = function (data) {
@@ -62,14 +73,18 @@ export const createShoppingCart = function (data) {
   });
 };
 
-export const addProductToCart = function (data) {
-  const dealer = findEl(data.dealer);
-  const product = findEl(data.product);
+export const addProductToCart = function () {
+  const dealer = findEl(state.dealer);
+  const product = findEl(state.product);
 
   const productFull = {
     ...product,
     quantity: state.quantityNumber,
   };
+
+  productFull.unit = document.querySelector(".unitValue").innerHTML;
+
+  // ÜBERARBEITEN ---------------------------------------------------------
 
   state.shoppingCart.forEach((cart) => {
     if (cart[dealer.name]) {

@@ -11,6 +11,7 @@ class ProductView extends View {
   _addButton;
   _unitValue;
   unitValueReturn;
+  _quantity;
 
   addHandlerAddBookmark(handler) {
     this._heartButton.addEventListener("click", handler);
@@ -32,10 +33,13 @@ class ProductView extends View {
 
   addHandlerChangeQuantity(handler, from) {
     this._quanContainer.addEventListener("click", function (e) {
-      console.log(from);
       if (e.target.closest(".quanPlus")) handler("+", from);
       if (e.target.closest(".quanMinus")) handler("-", from);
     });
+  }
+
+  displayQuantity(quantity) {
+    this._quantity.innerHTML = quantity;
   }
 
   addHandlerSelectUnit(handler) {
@@ -47,7 +51,9 @@ class ProductView extends View {
       .querySelector(".unitSelectListContainer")
       .classList.toggle("hidden");
 
-    // this._showAndHideOP(this._unitSelectList, "toggle");
+    document
+      .querySelector(".buttonArrowDown ")
+      .classList.toggle("btnTransform");
   }
 
   selectUnit() {
@@ -127,7 +133,9 @@ class ProductView extends View {
     this._backButton = document.querySelector(".arrBack");
     this._plusButton = document.querySelector(".quanPlus");
     this._minusButton = document.querySelector(".quanMinus");
+    this._quantity = document.querySelector(".quantity");
     this._quanContainer = document.querySelector(".quantityContainer");
+    this._quantButton = document.querySelector(".arrDown");
     this._heartButton = document.querySelector(".heartBtn");
     this._addButton = document.querySelector(".addButton");
     this._unitButton = document.querySelector(".unitSelection");

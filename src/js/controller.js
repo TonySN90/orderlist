@@ -8,8 +8,6 @@ import ShoppinglistView from "./views/shoppinglistView";
 import headerView from "./views/headerView";
 import productView from "./views/productView";
 import menuView from "./views/menuView.js";
-import dashboardView from "./views/dashboardView";
-import View from "./views/View.js";
 
 const controlBackToDB = function () {
   DashboardView.render(model.state.dealer);
@@ -29,8 +27,8 @@ const controlAddBookmark = function () {
 };
 
 const controlAddToShoppingCart = function (fromCart) {
-  model.addProductToCart(model.state);
-  console.log(fromCart);
+  // console.log(productView.unitValueReturn);
+  model.addProductToCart();
   if (fromCart) controlRenderShoCa();
   if (!fromCart) controlRenderShoLi();
   headerView.movementHeader();
@@ -56,9 +54,9 @@ const controlClickBack = function (fromCart) {
 };
 
 const controlUnitSelectList = function () {
+  console.log(model.state);
   productView.displayUnitSelectList();
   productView.selectUnit();
-  model.addUnitToProduct(productView.unitValueReturn);
 };
 
 const controlRenderShoLi = function () {
@@ -73,27 +71,37 @@ const controlRenderShoLi = function () {
   model.loadProductList();
 };
 
-const controlRenderProduct = function (operator, from = false) {
+const controlQuantity = function (operator) {
   model.changeQuantity(operator);
+  productView.displayQuantity(model.state.quantityNumber);
+};
+
+const controlRenderProduct = function (from = false) {
+  // model.resetCurUnit();
   ProductView.render(model.state, from);
   ProductView.addHandlerBack(controlClickBack);
   headerView.movementHeader();
-  productView.addHandlerChangeQuantity(controlRenderProduct);
+  productView.addHandlerChangeQuantity(controlQuantity, from);
   productView.addHandlerAddBookmark(controlAddBookmark);
   productView.AddToShoppingCart(controlAddToShoppingCart);
   productView.addHandlerSelectUnit(controlUnitSelectList);
 };
 
+// const productHelper() {
+
+// }
+
 const controlBackToPV = function (productID) {
   // model.load(productID);
+  model.resetQuantityNumber();
   model.state.product.id = productID;
   ProductView.render(model.state, true);
   ProductView.addHandlerBack(controlClickBack);
-  headerView.movementHeader();
-  productView.addHandlerChangeQuantity(controlRenderProduct, true);
+  productView.addHandlerChangeQuantity(controlQuantity, true);
   productView.addHandlerAddBookmark(controlAddBookmark);
   productView.AddToShoppingCart(controlAddToShoppingCart);
   productView.addHandlerSelectUnit(controlUnitSelectList);
+  headerView.movementHeader();
   headerView.resetHeader();
 
   // ÜBERARBEITEN
