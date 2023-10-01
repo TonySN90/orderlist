@@ -4,7 +4,7 @@ import { API_KEY, API_URL } from "./config";
 import { dataDealer, unitList } from "./data";
 import shoppinglistView from "./views/shoppinglistView";
 
-export const state = {
+export let state = {
   dealer: {
     id: null,
   },
@@ -45,17 +45,6 @@ export const loadProductList = function () {
   state.product = productList;
 };
 
-// export const addUnitToProduct = function (unit) {
-//   if (!state || !state.product || typeof state.product !== "object") return;
-//   const product = state.product.find((el) => el.id === +state.product.id);
-
-//   if (!product) return;
-//   if (!unit) return;
-//   console.log(unit);
-
-//   product.unit = unit;
-// };
-
 export const resetCurUnit = function () {
   state.product.unit = "test";
 };
@@ -63,6 +52,8 @@ export const resetCurUnit = function () {
 export const addBookmark = function (data) {
   const product = data.find((el) => el.id === +data.id);
   product.bookmarked = product.bookmarked ? false : true;
+
+  saveLocal();
 };
 
 const findEl = (data) => data.find((el) => el.id === +data.id);
@@ -98,6 +89,9 @@ export const addProductToCart = function () {
       }
     }
   });
+
+  saveLocal();
+  console.log(JSON.parse(localStorage.getItem("orderlistV2")));
 };
 
 export const deleteProduct = function (id) {
@@ -107,6 +101,9 @@ export const deleteProduct = function (id) {
       return product.id !== +id;
     });
   }
+
+  saveLocal();
+  console.log(JSON.parse(localStorage.getItem("orderlistV2")));
 };
 
 export const loadID = function (data) {
@@ -126,13 +123,23 @@ export const loadCurDealer = function () {
   state.curDealer = dealer.name;
 };
 
-const timeout = function (s = 2.5) {
-  return new Promise(function (_, reject) {
-    setTimeout(function () {
-      reject(new Error(`Request took too long! Timeout after ${s} second`));
-    }, s * 1000);
-  });
+export const saveLocal = function () {
+  localStorage.setItem("orderlistV2", JSON.stringify(state));
 };
+
+export const loadStorage = function () {
+  let storage = localStorage.getItem("orderlistV2");
+  if (storage) state = JSON.parse(storage);
+  console.log("Storage:", JSON.parse(storage));
+};
+
+// const timeout = function (s = 2.5) {
+//   return new Promise(function (_, reject) {
+//     setTimeout(function () {
+//       reject(new Error(`Request took too long! Timeout after ${s} second`));
+//     }, s * 1000);
+//   });
+// };
 
 // const getJSON = async function (url) {
 //   try {

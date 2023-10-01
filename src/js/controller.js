@@ -54,7 +54,6 @@ const controlClickBack = function (fromCart) {
 };
 
 const controlUnitSelectList = function () {
-  console.log(model.state);
   productView.displayUnitSelectList();
   productView.selectUnit();
 };
@@ -119,6 +118,7 @@ const controlRenderShoCa = function () {
 };
 
 const init = function () {
+  model.loadStorage();
   DashboardView.addHandlerLoadDb(controlLoadDb);
   menuView.toggleMenu();
   controlMenu();

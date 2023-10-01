@@ -447,6 +447,7 @@ export let unitList = [
   "Eimer",
   "Flasche/n",
   "Sack",
+  "Karton",
   "Bund/e",
   "Knolle/n",
   "Rolle/n",
