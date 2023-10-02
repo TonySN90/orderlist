@@ -8,8 +8,8 @@
 - product sorting in shoppingListView
 - footer name bug fixing
 - build and implement spinner
-- refurbish back logic
+- implement timestamp
+- implement clear Shoppinglist logic
 
-- ADD dealer
-- ADD Product
+- Add dealer
 - effects

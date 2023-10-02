@@ -20,6 +20,7 @@ export let state = {
   quantityNumber: 1,
   curDealer: "",
   curScrollPos: 0,
+  timeStamp: "",
 };
 
 export const changeQuantity = function (operator) {
@@ -136,7 +137,6 @@ export const addToProductList = function (value) {
     return +newID;
   };
 
-  console.log(state);
   const obj = {
     id: generateID(),
     name: `${value}`,
@@ -146,8 +146,8 @@ export const addToProductList = function (value) {
       "https://media.istockphoto.com/id/505408074/de/foto/gro%C3%9Fen-weidenkorb-mit-bio-produkten.jpg?s=612x612&w=0&k=20&c=PhJBvDvSZ5XAXSEYZ5kIH3nNHK_Et1m6WfuJY8lRTJA=",
   };
 
-  console.log(obj);
   state.product.push(obj);
+  saveLocal();
 };
 
 export const saveLocal = function () {
