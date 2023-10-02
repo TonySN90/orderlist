@@ -44,8 +44,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1rem;
-  // position: relative;
+  margin-bottom: 2rem;
+  position: relative;
 }
 
 .unitSelection {
@@ -55,6 +55,7 @@
 .quantityContainer {
   display: flex;
   align-items: center;
+  margin-top: -2rem;
 }
 
 .quanButton {
@@ -79,18 +80,21 @@
 }
 
 .addButton {
-  margin-top: 1.3rem;
+  margin-top: 3rem;
   margin-left: auto;
   margin-right: auto;
-  width: 10rem;
-  height: 2.5rem;
-  background-color: $orangeFull;
+  width: 6rem;
+  height: 2.1rem;
 
+  background-color: $orangeFull;
   border-radius: 0.5rem;
 
   display: flex;
   align-items: center;
   justify-content: center;
+
+  position: absolute;
+  right: 0;
 }
 
 .arrBack {

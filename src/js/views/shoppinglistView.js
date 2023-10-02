@@ -5,6 +5,7 @@ import * as model from "../model.js";
 
 class ShoppinglistView extends View {
   _products;
+  _inputFieldDealer;
 
   loadProductList(_product) {
     return this._products;
@@ -15,6 +16,13 @@ class ShoppinglistView extends View {
     parentElement.addEventListener("click", function (e) {
       const id = e.target.closest(".card").dataset.id;
       return id;
+    });
+  }
+
+  addToShoppingList(handler) {
+    this._addDealer.addEventListener("click", () => {
+      handler(this._inputFieldDealer.value);
+      this._inputFieldDealer.value = "";
     });
   }
 
@@ -51,7 +59,7 @@ class ShoppinglistView extends View {
     <div class="shoppingArea">
     <div class="inputContainer inputSearch">
       <div class="inputAddDealer">
-        <input type="text" id="textInputDealer" placeholder="Suche..." />
+        <input type="text" id="textInputDealer" placeholder="Produkt hinzufügen..." />
       </div>
       <div class="inputField">
         <div class="button button--addDealer">
@@ -71,6 +79,8 @@ class ShoppinglistView extends View {
     </div>`;
 
     this._insertHTML(markup);
+    this._addDealer = document.querySelector(".button--addDealer");
+    this._inputFieldDealer = document.querySelector("#textInputDealer");
   }
 }
 

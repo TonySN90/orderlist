@@ -123,6 +123,33 @@ export const loadCurDealer = function () {
   state.curDealer = dealer.name;
 };
 
+export const addToProductList = function (value) {
+  const generateID = function () {
+    let IDs = [];
+    state.product.forEach((pro) => IDs.push(pro.id));
+
+    let newID;
+    do {
+      newID = Math.floor(2000 + Math.random() * 1000).toString();
+    } while (IDs.includes(+newID));
+
+    return +newID;
+  };
+
+  console.log(state);
+  const obj = {
+    id: generateID(),
+    name: `${value}`,
+    unit: "Stück",
+    category: "other",
+    image_src:
+      "https://media.istockphoto.com/id/505408074/de/foto/gro%C3%9Fen-weidenkorb-mit-bio-produkten.jpg?s=612x612&w=0&k=20&c=PhJBvDvSZ5XAXSEYZ5kIH3nNHK_Et1m6WfuJY8lRTJA=",
+  };
+
+  console.log(obj);
+  state.product.push(obj);
+};
+
 export const saveLocal = function () {
   localStorage.setItem("orderlistV2", JSON.stringify(state));
 };

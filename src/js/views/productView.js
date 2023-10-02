@@ -102,8 +102,9 @@ class ProductView extends View {
               <ul class="unitSelectList">
                 ${units.join("")}
               </ul>
+            </div>
           </div>
-          </div>
+          <div class="addButton"><p>Hinzufügen</p></div>
           <div class="quantityContainer">
             <div class="quanMinus quanButton">
               <p>-</p>
@@ -123,7 +124,6 @@ class ProductView extends View {
         }
           </p>
         </div>
-        <div class="addButton"><p>Hinzufügen</p></div>
       </div>
     </div>
   </div>

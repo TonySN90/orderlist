@@ -27,7 +27,6 @@ const controlAddBookmark = function () {
 };
 
 const controlAddToShoppingCart = function (fromCart) {
-  // console.log(productView.unitValueReturn);
   model.addProductToCart();
   if (fromCart) controlRenderShoCa();
   if (!fromCart) controlRenderShoLi();
@@ -58,6 +57,11 @@ const controlUnitSelectList = function () {
   productView.selectUnit();
 };
 
+const controlAddProductToShoLi = function (value) {
+  model.addToProductList(value);
+  controlRenderShoLi();
+};
+
 const controlRenderShoLi = function () {
   model.resetQuantityNumber();
   ShoppinglistView.render(model.state);
@@ -68,6 +72,7 @@ const controlRenderShoLi = function () {
   model.loadID(model.state);
   model.loadCurDealer();
   model.loadProductList();
+  ShoppinglistView.addToShoppingList(controlAddProductToShoLi);
 };
 
 const controlQuantity = function (operator) {

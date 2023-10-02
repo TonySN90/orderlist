@@ -132,6 +132,22 @@ export let productsLidl = [
       "https://img.rewe-static.de/8577412/27664718_digital-image.png?impolicy=s-offers&imwidth=200&output-format=image/webp",
   },
   {
+    id: 1038,
+    name: "Jagdwurst",
+    unit: "Stück",
+    category: "meat",
+    image_src:
+      "https://img.rewe-static.de/8736446/36434858_digital-image.png?impolicy=s-products&imwidth=200&output-format=image/webp",
+  },
+  {
+    id: 1039,
+    name: "Salami",
+    unit: "Stück",
+    category: "meat",
+    image_src:
+      "https://img.rewe-static.de/0274877/26966792_digital-image.png?impolicy=s-products&imwidth=200&output-format=image/webp",
+  },
+  {
     id: 1017,
     name: "Gratinkäse",
     unit: "Tüte",
@@ -311,12 +327,28 @@ export const productsBeka = [
       "https://www.avikofoodservice.com/_next/image?url=https%3A%2F%2Faviko-eu.s3.eu-west-2.amazonaws.com%2Fgroup%2F2022-07%2F322525%2520Aviko%2520Pommes%2520Frites%2520Crinkle%25202500g.png&w=1440&q=100",
   },
   {
+    id: 2017,
+    name: "Kroketten",
+    unit: "Tüte",
+    category: "frozen",
+    image_src:
+      "https://d40toz3wdlpr6.cloudfront.net/medias/sys_master/root/h04/h74/8971362959390/2356961-01.jpg",
+  },
+  {
     id: 2004,
-    name: "Herzogin",
+    name: "Herzoginkartoffeln",
     unit: "Tüte",
     category: "frozen",
     image_src:
       "https://d40toz3wdlpr6.cloudfront.net/medias/sys_master/root/h45/h09/9251190177822/1859986-01.jpg",
+  },
+  {
+    id: 2007,
+    name: "Röstis",
+    unit: "Tüte",
+    category: "frozen",
+    image_src:
+      "https://d40toz3wdlpr6.cloudfront.net/medias/sys_master/root/heb/hce/9251192930334/660590-01.jpg",
   },
   {
     id: 2005,
@@ -334,14 +366,6 @@ export const productsBeka = [
     category: "frozen",
     image_src:
       "https://d40toz3wdlpr6.cloudfront.net/medias/sys_master/root/hfd/hed/8971553669150/2200198-01.jpg",
-  },
-  {
-    id: 2007,
-    name: "Röstis",
-    unit: "Tüte",
-    category: "frozen",
-    image_src:
-      "https://d40toz3wdlpr6.cloudfront.net/medias/sys_master/root/heb/hce/9251192930334/660590-01.jpg",
   },
   {
     id: 2008,
@@ -409,11 +433,27 @@ export const productsBeka = [
   },
   {
     id: 2016,
+    name: "Zander",
+    unit: "kg",
+    category: "fish",
+    image_src:
+      "https://d40toz3wdlpr6.cloudfront.net/medias/sys_master/root/h88/hce/9263501148190/1932756-01.jpg",
+  },
+  {
+    id: 2017,
     name: "Brathering",
     unit: "Eimer",
     category: "fish",
     image_src:
       "https://www.maevo.de/cdn/shop/products/1001165_1024x1024@2x.jpg?v=1643899599",
+  },
+  {
+    id: 2018,
+    name: "Matjes",
+    unit: "Eimer",
+    category: "fish",
+    image_src:
+      "https://d40toz3wdlpr6.cloudfront.net/medias/sys_master/root/hf5/h42/9097732259870/857602-01.jpg",
   },
 ];
 // -------------------------------------
