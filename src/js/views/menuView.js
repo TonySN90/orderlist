@@ -6,6 +6,7 @@ class MenuView extends View {
   _burgerButton = document.querySelector(".burgerContainer");
   _closeButton = document.querySelector(".closeButtonContainer");
   _menuDealerButton = document.querySelector(".menuMyDealer");
+  _menuClearButton = document.querySelector(".menuClearList");
 
   _openCloseMenu() {
     const menu = document.querySelector("#menu");
@@ -22,6 +23,20 @@ class MenuView extends View {
     this._menuDealerButton.addEventListener("click", () => {
       handler();
       this._openCloseMenu();
+    });
+  }
+
+  displayMenuEntry_Clear() {
+    this._menuClearButton.classList.remove("hidden");
+  }
+
+  hideMenuEntry_Clear() {
+    this._menuClearButton.classList.add("hidden");
+  }
+
+  addHandlerClearShoppingList(handler) {
+    this._menuClearButton.addEventListener("click", () => {
+      handler();
     });
   }
 }

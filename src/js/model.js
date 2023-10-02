@@ -61,7 +61,8 @@ const findEl = (data) => data.find((el) => el.id === +data.id);
 
 export const createShoppingCart = function (data) {
   state.dealer.forEach((dealer) => {
-    state.shoppingCart.push({ [dealer.name]: [] });
+    if (state.shoppingCart.length === state.dealer.length) return;
+    else state.shoppingCart.push({ [dealer.name]: [] });
   });
 };
 
@@ -89,10 +90,10 @@ export const addProductToCart = function () {
         cart[dealer.name].push(productFull);
       }
     }
+    console.log(state.shoppingCart);
   });
 
   saveLocal();
-  console.log(JSON.parse(localStorage.getItem("orderlistV2")));
 };
 
 export const deleteProduct = function (id) {
@@ -105,6 +106,10 @@ export const deleteProduct = function (id) {
 
   saveLocal();
   console.log(JSON.parse(localStorage.getItem("orderlistV2")));
+};
+
+export const clearShoppingList = function () {
+  console.log(state);
 };
 
 export const loadID = function (data) {
@@ -147,7 +152,7 @@ export const addToProductList = function (value) {
   };
 
   state.product.push(obj);
-  saveLocal();
+  // saveLocal();
 };
 
 export const saveLocal = function () {

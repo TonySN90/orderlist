@@ -13,12 +13,16 @@ const controlBackToDB = function () {
   DashboardView.render(model.state.dealer);
   headerView.movementCartLogo();
   model.loadID();
-
   headerView.resetHeader();
+};
+
+const controlCLearShoppingCart = function () {
+  model.clearShoppingList();
 };
 
 const controlMenu = function () {
   menuView.toDealer(controlBackToDB);
+  menuView.addHandlerClearShoppingList(controlCLearShoppingCart);
 };
 
 const controlAddBookmark = function () {
@@ -60,6 +64,8 @@ const controlUnitSelectList = function () {
 const controlAddProductToShoLi = function (value) {
   model.addToProductList(value);
   controlRenderShoLi();
+
+  // Validierung einfügen!!!!!!!!!!!!!!!!!!!!!!!!!!
 };
 
 const controlRenderShoLi = function () {
@@ -73,6 +79,7 @@ const controlRenderShoLi = function () {
   model.loadCurDealer();
   model.loadProductList();
   ShoppinglistView.addToShoppingList(controlAddProductToShoLi);
+  menuView.displayMenuEntry_Clear();
 };
 
 const controlQuantity = function (operator) {
@@ -81,7 +88,6 @@ const controlQuantity = function (operator) {
 };
 
 const controlRenderProduct = function (from = false) {
-  // model.resetCurUnit();
   ProductView.render(model.state, from);
   ProductView.addHandlerBack(controlClickBack);
   headerView.movementHeader();
