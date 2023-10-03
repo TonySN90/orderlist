@@ -8,6 +8,7 @@ import ShoppinglistView from "./views/shoppinglistView";
 import headerView from "./views/headerView";
 import productView from "./views/productView";
 import menuView from "./views/menuView.js";
+import shoppinglistView from "./views/shoppinglistView";
 
 const controlBackToDB = function () {
   DashboardView.render(model.state.dealer);
@@ -20,7 +21,8 @@ const controlCLearShoppingCart = function () {
   model.clearShoppingList();
   controlRenderShoLi();
   headerView.hideBackArrow();
-  // Überarbeiten !!!!!!!!!!!!!!!!!!
+  // fixing bug
+};
 
 const controlMenu = function () {
   menuView.toDealer(controlBackToDB);
@@ -71,6 +73,10 @@ const controlAddProductToShoLi = function (value) {
   // Validierung einfügen!!!!!!!!!!!!!!!!!!!!!!!!!!
 };
 
+controlScroll = function () {
+  model.saveScrollPosition();
+};
+
 const controlRenderShoLi = function () {
   model.resetQuantityNumber();
   ShoppinglistView.render(model.state);
@@ -83,6 +89,7 @@ const controlRenderShoLi = function () {
   model.loadProductList();
   ShoppinglistView.addToShoppingList(controlAddProductToShoLi);
   menuView.displayMenuEntry_Clear();
+  model.loadScrollPosition();
 };
 
 const controlQuantity = function (operator) {
@@ -91,6 +98,7 @@ const controlQuantity = function (operator) {
 };
 
 const controlRenderProduct = function (from = false) {
+  model.saveScrollPosition();
   ProductView.render(model.state, from);
   ProductView.addHandlerBack(controlClickBack);
   headerView.movementHeader();
@@ -139,12 +147,3 @@ const init = function () {
 };
 
 init();
-
-// const markup = `
-// <img src="src/img/products/strawberry.png" alt="" />
-// `;
-
-// const body = document.querySelector("body");
-// body.insertAdjacentHTML("afterbegin", markup);
-
-// console.log("test");

@@ -20,9 +20,9 @@ export let state = {
   },
   quantityNumber: 1,
   curDealer: "",
-  curScrollPos: 0,
   timeStamp: "",
 };
+let curScrollPos;
 
 export const changeQuantity = function (operator) {
   if (state.quantityNumber >= 1) {
@@ -115,6 +115,17 @@ export const clearShoppingList = function () {
 
   menuView.openCloseMenu();
   saveLocal();
+};
+
+export const saveScrollPosition = function () {
+  // if (curScrollPos === 0) return;
+  curScrollPos = window.scrollY;
+  console.log(curScrollPos);
+};
+
+export const loadScrollPosition = function () {
+  console.log(curScrollPos);
+  window.scrollTo({ top: curScrollPos, left: 0, behavior: "smooth" });
 };
 
 export const loadID = function (data) {

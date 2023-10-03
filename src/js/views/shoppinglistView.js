@@ -7,6 +7,12 @@ class ShoppinglistView extends View {
   _products;
   _inputFieldDealer;
 
+  addHandlerScroll(handler) {
+    window.addEventListener("scroll", () => {
+      handler();
+    });
+  }
+
   loadProductList(_product) {
     return this._products;
   }
