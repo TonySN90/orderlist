@@ -8,7 +8,7 @@ class ShoppinglistView extends View {
   _inputFieldDealer;
 
   addHandlerScroll(handler) {
-    window.addEventListener("scroll", () => {
+    window.addEventListener("scrollend", () => {
       handler();
     });
   }

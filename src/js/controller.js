@@ -98,7 +98,7 @@ const controlQuantity = function (operator) {
 };
 
 const controlRenderProduct = function (from = false) {
-  model.saveScrollPosition();
+  // model.saveScrollPosition();
   ProductView.render(model.state, from);
   ProductView.addHandlerBack(controlClickBack);
   headerView.movementHeader();
@@ -144,6 +144,7 @@ const init = function () {
   DashboardView.addHandlerLoadDb(controlLoadDb);
   menuView.toggleMenu();
   controlMenu();
+  shoppinglistView.addHandlerScroll(controlScroll);
 };
 
 init();

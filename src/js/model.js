@@ -118,13 +118,10 @@ export const clearShoppingList = function () {
 };
 
 export const saveScrollPosition = function () {
-  // if (curScrollPos === 0) return;
   curScrollPos = window.scrollY;
-  console.log(curScrollPos);
 };
 
 export const loadScrollPosition = function () {
-  console.log(curScrollPos);
   window.scrollTo({ top: curScrollPos, left: 0, behavior: "smooth" });
 };
 
