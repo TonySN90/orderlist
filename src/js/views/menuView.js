@@ -8,21 +8,21 @@ class MenuView extends View {
   _menuDealerButton = document.querySelector(".menuMyDealer");
   _menuClearButton = document.querySelector(".menuClearList");
 
-  _openCloseMenu() {
+  openCloseMenu() {
     const menu = document.querySelector("#menu");
     menu.style.width = menu.style.width === "70vw" ? "" : "70vw";
   }
 
   toggleMenu() {
     [this._burgerButton, this._closeButton].forEach((button) => {
-      button.addEventListener("click", this._openCloseMenu);
+      button.addEventListener("click", this.openCloseMenu);
     });
   }
 
   toDealer(handler) {
     this._menuDealerButton.addEventListener("click", () => {
       handler();
-      this._openCloseMenu();
+      this.openCloseMenu();
     });
   }
 

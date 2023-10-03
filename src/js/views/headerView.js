@@ -26,6 +26,10 @@ class HeaderView extends View {
     this._showAndHideOP(this._backButtonHeader);
   }
 
+  hideBackArrow() {
+    this._backButtonHeader.classList.add("hidden");
+  }
+
   movementHeader() {
     this._parentElementBody.firstElementChild.className === "productView"
       ? (header.className = "hidden")

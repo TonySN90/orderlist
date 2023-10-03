@@ -18,11 +18,14 @@ const controlBackToDB = function () {
 
 const controlCLearShoppingCart = function () {
   model.clearShoppingList();
-};
+  controlRenderShoLi();
+  headerView.hideBackArrow();
+  // Überarbeiten !!!!!!!!!!!!!!!!!!
 
 const controlMenu = function () {
   menuView.toDealer(controlBackToDB);
   menuView.addHandlerClearShoppingList(controlCLearShoppingCart);
+  headerView.resetHeader();
 };
 
 const controlAddBookmark = function () {

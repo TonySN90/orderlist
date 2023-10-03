@@ -2,6 +2,7 @@
 
 import { API_KEY, API_URL } from "./config";
 import { dataDealer, unitList } from "./data";
+import menuView from "./views/menuView";
 import shoppinglistView from "./views/shoppinglistView";
 
 export let state = {
@@ -90,7 +91,6 @@ export const addProductToCart = function () {
         cart[dealer.name].push(productFull);
       }
     }
-    console.log(state.shoppingCart);
   });
 
   saveLocal();
@@ -109,7 +109,12 @@ export const deleteProduct = function (id) {
 };
 
 export const clearShoppingList = function () {
-  console.log(state);
+  state.shoppingCart.forEach((cart) => {
+    if (cart[state.curDealer]) cart[state.curDealer] = [];
+  });
+
+  menuView.openCloseMenu();
+  saveLocal();
 };
 
 export const loadID = function (data) {
