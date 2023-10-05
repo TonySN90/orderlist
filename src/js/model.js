@@ -17,10 +17,12 @@ export let state = {
   },
   log: {
     Beka: [
-      { user: "User", timestamp: "12.09.2023 - 08:57" },
-      { user: "User", timestamp: "12.09.2023 - 09:03" },
+      // { user: "User", timestamp: "12.09.2023 - 08:57" },
+      // { user: "User", timestamp: "12.09.2023 - 09:03" },
     ],
-    Lidl: [{ user: "User", timestamp: "12.09.2023 - 08:58" }],
+    Lidl: [
+      // { user: "User", timestamp: "12.09.2023 - 08:58" }
+    ],
   },
 
   shoppingCart: [],
@@ -233,11 +235,3 @@ export const loadStorage = function () {
 // };
 
 // loadProduct();
-
-// export const log = {
-//   Beka: [
-//     { user: "Tony", timestamp: "Do 05.10.2023 - 08:57" },
-//     { user: "Tony", timestamp: "Do 05.10.2023 - 09:03" },
-//   ],
-//   Lidl: [{ user: "Tony", timestamp: "Do 05.10.2023 - 08:58" }],
-// };

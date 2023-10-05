@@ -22,6 +22,7 @@ const controlCLearShoppingCart = function () {
   model.clearShoppingList();
   controlRenderShoLi();
   headerView.hideBackArrow();
+  model.createLogEntry();
   // fixing bug
 };
 
