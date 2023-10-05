@@ -1,7 +1,5 @@
 "use strict";
 
-console.log("test");
-
 import View from "./View.js";
 import * as model from "../model.js";
 

@@ -56,11 +56,14 @@ const controlDeleteProduct = function () {
 };
 
 const controlLoadDb = function () {
-  model.loadDealerList();
-  DashboardView.render(model.state);
-  model.loadID();
-  model.createShoppingCart();
-  DashboardView.addHandlerRender(controlRenderShoLi);
+  dashboardView.renderSpinner();
+  setTimeout(function () {
+    model.loadDealerList();
+    DashboardView.render(model.state);
+    model.loadID();
+    model.createShoppingCart();
+    DashboardView.addHandlerRender(controlRenderShoLi);
+  }, 200);
 };
 
 const controlClickBack = function (fromCart) {
@@ -118,7 +121,8 @@ const controlRenderProduct = function (from = false) {
     productView.addHandlerAddBookmark(controlAddBookmark);
     productView.AddToShoppingCart(controlAddToShoppingCart);
     productView.addHandlerSelectUnit(controlUnitSelectList);
-  }, 200);
+    productView.unfoldText();
+  }, 150);
 };
 
 // const productHelper() {
@@ -127,16 +131,19 @@ const controlRenderProduct = function (from = false) {
 
 const controlBackToPV = function (productID) {
   // model.load(productID);
-  model.resetQuantityNumber();
-  model.state.product.id = productID;
-  ProductView.render(model.state, true);
-  ProductView.addHandlerBack(controlClickBack);
-  productView.addHandlerChangeQuantity(controlQuantity, true);
-  productView.addHandlerAddBookmark(controlAddBookmark);
-  productView.AddToShoppingCart(controlAddToShoppingCart);
-  productView.addHandlerSelectUnit(controlUnitSelectList);
-  headerView.movementHeader();
-  headerView.resetHeader();
+  productView.renderSpinner();
+  setTimeout(function () {
+    model.resetQuantityNumber();
+    model.state.product.id = productID;
+    ProductView.render(model.state, true);
+    ProductView.addHandlerBack(controlClickBack);
+    productView.addHandlerChangeQuantity(controlQuantity, true);
+    productView.addHandlerAddBookmark(controlAddBookmark);
+    productView.AddToShoppingCart(controlAddToShoppingCart);
+    productView.addHandlerSelectUnit(controlUnitSelectList);
+    headerView.movementHeader();
+    headerView.resetHeader();
+  }, 200);
 
   // ÜBERARBEITEN
 };

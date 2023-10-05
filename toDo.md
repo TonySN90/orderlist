@@ -9,6 +9,7 @@
 
 - Add dealer
 - effects
+- validation input!!
 
 Done
 

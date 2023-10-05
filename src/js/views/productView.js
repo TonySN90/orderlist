@@ -12,6 +12,9 @@ class ProductView extends View {
   _unitValue;
   unitValueReturn;
   _quantity;
+  _unfoldTextButton;
+  _partialText;
+  _fullText;
 
   addHandlerAddBookmark(handler) {
     this._heartButton.addEventListener("click", handler);
@@ -65,6 +68,19 @@ class ProductView extends View {
     });
   }
 
+  unfoldText() {
+    this._unfoldTextButton.addEventListener("click", () => {
+      this._unfoldTextButton.classList.toggle("btnT180deg");
+      // setTimeout(() => {
+      this._partialText.classList.toggle("hidden");
+      this._fullText.classList.toggle("hidden");
+
+      this._eff_opacity(this._fullText, ".3");
+      this._eff_opacity(this._partialText, ".3");
+      // }, 500);
+    });
+  }
+
   _generateMarkup() {
     const product = this._data.product.find(
       (pro) => pro.id === +this._data.product.id
@@ -73,6 +89,20 @@ class ProductView extends View {
     const units = this._data.units.map((unit) => {
       return `<li>${unit}</li>`;
     });
+
+    this._fullText = `${
+      product.description
+        ? product.description
+        : "Keine Beschreibung vorhanden."
+    }`;
+
+    const splitText = function (text, lines) {
+      const textArray = text.split(" ");
+      return `${textArray.slice(0, lines).join(" ")}...`;
+    };
+
+    const initialText = splitText(this._fullText, 30);
+    this._partialText = initialText;
 
     const markup = `
     <div class="productView">
@@ -94,7 +124,7 @@ class ProductView extends View {
         <div class="units">
           <div class="unitSelection">
             <h3 class="unitValue">${product.unit}</h3>
-            <div class="buttonArrowDown ">
+            <div class="buttonArrowDown">
               <div class="arrLeft arrBoth"></div>
               <div class="arrRight arrBoth"></div>
             </div>
@@ -116,13 +146,14 @@ class ProductView extends View {
         </div>
         <div class="productDescription">
           <h3>Produkt Beschreibung</h3>
-          <p>
-        ${
-          product.description
-            ? product.description
-            : "Lorem ipsum dolor sit amet consectetur adipisicing elit.Distinctio, assumenda eius amet, eum error sunt officiis iurequas dignissimos itaque, quo ut veritatis necessitatibus quiapossimus. Sit ex dolore sed."
-        }
-          </p>
+          <p class="partialText">${this._partialText}</p>
+          <p class="fullText hidden">${this._fullText}</p>
+          <div class="unfold">
+            <div class="buttonArrowDown unfoldTextButton">
+              <div class="arrLeft arrBoth"></div>
+              <div class="arrRight arrBoth"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -141,6 +172,9 @@ class ProductView extends View {
     this._unitButton = document.querySelector(".unitSelection");
     this._unitSelectList = document.querySelector(".unitSelectListContainer");
     this._unitValue = document.querySelector(".unitValue");
+    this._partialText = document.querySelector(".partialText");
+    this._fullText = document.querySelector(".fullText");
+    this._unfoldTextButton = document.querySelector(".unfoldTextButton");
   }
 }
 

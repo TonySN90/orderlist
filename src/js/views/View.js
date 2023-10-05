@@ -27,8 +27,7 @@ export default class View {
   renderSpinner() {
     const markup = `
     <div class="custom-loader"></div>`;
-    this._parentElementBody.innerHTML = "";
-    this._parentElementBody.insertAdjacentHTML("afterbegin", markup);
+    this._insertHTML(markup);
   }
 
   addHandlerRender(handler) {
@@ -53,14 +52,17 @@ export default class View {
     this._parentElementBody.insertAdjacentHTML("afterbegin", markup);
   }
 
-  _showAndHideOP(el, shown) {
-    // if (el.className === "hidden") el.classList.add("hidden");
-    // if (el.className !== "hidden") el.classList.remove("hidden");
+  _eff_opacity(el, s) {
+    el.style.opacity = "0";
+    el.style.transition = `opacity ${s}s`;
+    setTimeout(() => {
+      el.style.opacity = "1";
+    }, 0);
+  }
 
+  _showAndHideOP(el, shown) {
     if (shown) el.classList.add("hidden");
     if (!shown) el.classList.remove("hidden");
-
-    // if ("toggle") el.classList.toggle("hidden");
 
     el.style.opacity = "0";
     el.style.transition = "opacity 0.2s";
