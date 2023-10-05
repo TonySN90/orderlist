@@ -5,14 +5,24 @@ import { dataDealer, unitList } from "./data";
 import menuView from "./views/menuView";
 import shoppinglistView from "./views/shoppinglistView";
 
+export let state2 = {};
 export let state = {
   dealer: {
     id: null,
+    timestamp: [],
   },
   product: {
     id: null,
     bookmarked: false,
   },
+  log: {
+    Beka: [
+      { user: "User", timestamp: "12.09.2023 - 08:57" },
+      { user: "User", timestamp: "12.09.2023 - 09:03" },
+    ],
+    Lidl: [{ user: "User", timestamp: "12.09.2023 - 08:58" }],
+  },
+
   shoppingCart: [],
   bookmarks: {
     Lidl: [],
@@ -20,7 +30,6 @@ export let state = {
   },
   quantityNumber: 1,
   curDealer: "",
-  timeStamp: "",
 };
 let curScrollPos;
 
@@ -58,14 +67,14 @@ export const addBookmark = function (data) {
   saveLocal();
 };
 
-const findEl = (data) => data.find((el) => el.id === +data.id);
-
 export const createShoppingCart = function (data) {
   state.dealer.forEach((dealer) => {
     if (state.shoppingCart.length === state.dealer.length) return;
     else state.shoppingCart.push({ [dealer.name]: [] });
   });
 };
+
+const findEl = (data) => data.find((el) => el.id === +data.id);
 
 export const addProductToCart = function () {
   const dealer = findEl(state.dealer);
@@ -96,6 +105,24 @@ export const addProductToCart = function () {
   saveLocal();
 };
 
+export const createLogEntry = function () {
+  const weekdays = ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"];
+  const now = new Date();
+  const day = String(now.getDate()).padStart(2, "0");
+  const month = String(now.getMonth() + 1).padStart(2, "0");
+
+  // const weekday = weekdays[+day - 1];
+  const year = now.getFullYear();
+  const hour = String(now.getHours()).padStart(2, "0");
+  const minutes = String(now.getMinutes()).padStart(2, "0");
+
+  const timestamp = `${day}.${month}.${year} - ${hour}:${minutes}`;
+  const obj = { user: "User", timestamp: timestamp };
+
+  state.log[state.curDealer].push(obj);
+  saveLocal();
+};
+
 export const deleteProduct = function (id) {
   const dealer = state.shoppingCart.find((dealers) => dealers[state.curDealer]);
   if (dealer && dealer[state.curDealer]) {
@@ -105,7 +132,6 @@ export const deleteProduct = function (id) {
   }
 
   saveLocal();
-  console.log(JSON.parse(localStorage.getItem("orderlistV2")));
 };
 
 export const clearShoppingList = function () {
@@ -125,7 +151,7 @@ export const loadScrollPosition = function () {
   window.scrollTo({ top: curScrollPos, left: 0, behavior: "smooth" });
 };
 
-export const loadID = function (data) {
+export const loadID = function () {
   const parentElement = document.querySelector(".cards");
   parentElement.addEventListener("click", function (e) {
     const id = e.target.closest(".card").dataset.id;
@@ -174,8 +200,11 @@ export const saveLocal = function () {
 
 export const loadStorage = function () {
   let storage = localStorage.getItem("orderlistV2");
-  if (storage) state = JSON.parse(storage);
-  console.log("Storage:", JSON.parse(storage));
+  // console.log("Storage:", JSON.parse(storage));
+
+  if (!storage) return;
+  state = JSON.parse(storage);
+  // console.log(state);
 };
 
 // const timeout = function (s = 2.5) {
@@ -204,3 +233,11 @@ export const loadStorage = function () {
 // };
 
 // loadProduct();
+
+// export const log = {
+//   Beka: [
+//     { user: "Tony", timestamp: "Do 05.10.2023 - 08:57" },
+//     { user: "Tony", timestamp: "Do 05.10.2023 - 09:03" },
+//   ],
+//   Lidl: [{ user: "Tony", timestamp: "Do 05.10.2023 - 08:58" }],
+// };

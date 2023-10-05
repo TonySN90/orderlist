@@ -14,9 +14,10 @@ export default class View {
   _data;
   _from;
 
-  render(data, fromPV = false) {
+  render(data, dataLog, fromPV = false) {
     if (data) {
       this._data = data;
+      this._dataLog = dataLog;
       if (fromPV) this._from = fromPV;
       if (!fromPV) this._from = fromPV;
       this._generateMarkup();

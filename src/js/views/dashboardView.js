@@ -1,6 +1,7 @@
 "use strict";
 
 import View from "./View.js";
+import * as model from "../model.js";
 
 class DashboardView extends View {
   _headerDealerTitle = document.querySelector(".headerDealerTitle");
@@ -11,7 +12,8 @@ class DashboardView extends View {
   }
 
   _generateMarkup() {
-    const generateDealer = this._data.map((dealer) => {
+    const generateDealer = this._data.dealer.map((dealer) => {
+      const [log] = this._data.log[dealer.name].map((log) => log).splice(-1);
       return `
       <li class="card listEntryContainer" data-name="${dealer.name}" data-id="${dealer.id}" data-card="dealer">
       <div class="listEntry">
@@ -22,8 +24,8 @@ class DashboardView extends View {
             alt=""
           />
         </div>
-        <p class="pLastUse">letzte Bestellung:</p>
-        <p class="pDate">12.09.2023 - 20:15</p>
+        <p class="pLastUse">Letzte Bearbeitung:</p>
+        <p class="pDate">${log.timestamp}</p>
       </div>
     </li>
       `;
@@ -62,3 +64,5 @@ class DashboardView extends View {
 }
 
 export default new DashboardView();
+
+// ${this._data.timestamp ? this._data.timestamp : "Neue Liste."}

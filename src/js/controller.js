@@ -11,10 +11,11 @@ import menuView from "./views/menuView.js";
 import shoppinglistView from "./views/shoppinglistView";
 
 const controlBackToDB = function () {
-  DashboardView.render(model.state.dealer);
+  DashboardView.render(model.state);
   headerView.movementCartLogo();
   model.loadID();
   headerView.resetHeader();
+  menuView.hideMenuEntry_Clear();
 };
 
 const controlCLearShoppingCart = function () {
@@ -40,6 +41,8 @@ const controlAddToShoppingCart = function (fromCart) {
   if (fromCart) controlRenderShoCa();
   if (!fromCart) controlRenderShoLi();
   headerView.movementHeader();
+  model.createLogEntry();
+  model.saveLocal();
 };
 
 const controlDeleteProduct = function () {
@@ -49,7 +52,7 @@ const controlDeleteProduct = function () {
 
 const controlLoadDb = function () {
   model.loadDealerList();
-  DashboardView.render(model.state.dealer);
+  DashboardView.render(model.state);
   model.loadID();
   model.createShoppingCart();
   DashboardView.addHandlerRender(controlRenderShoLi);
@@ -73,7 +76,7 @@ const controlAddProductToShoLi = function (value) {
   // Validierung einfügen!!!!!!!!!!!!!!!!!!!!!!!!!!
 };
 
-controlScroll = function () {
+const controlScroll = function () {
   model.saveScrollPosition();
 };
 
@@ -98,7 +101,6 @@ const controlQuantity = function (operator) {
 };
 
 const controlRenderProduct = function (from = false) {
-  // model.saveScrollPosition();
   ProductView.render(model.state, from);
   ProductView.addHandlerBack(controlClickBack);
   headerView.movementHeader();

@@ -434,13 +434,13 @@ export const productsBeka = [
   {
     id: 2016,
     name: "Zander",
-    unit: "kg",
+    unit: "Karton",
     category: "fish",
     image_src:
       "https://d40toz3wdlpr6.cloudfront.net/medias/sys_master/root/h88/hce/9263501148190/1932756-01.jpg",
   },
   {
-    id: 2017,
+    id: 2019,
     name: "Brathering",
     unit: "Eimer",
     category: "fish",

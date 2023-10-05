@@ -1,0 +1,191 @@
+.productImgSection {
+  background-color: #fff;
+  height: 45vh;
+  display: flex;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 30%,
+    100% 100%,
+    74% 88%,
+    29% 88%,
+    0 78%,
+    0% 30%
+  );
+}
+
+.productSection {
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.productImgContainer {
+  background-color: #fff;
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.productImgSection img {
+  width: 15rem;
+  height: 15rem;
+}
+
+.productTitle h1 {
+  margin-bottom: 1rem;
+}
+
+.units {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.unitSelection {
+  display: flex;
+}
+
+.quantityContainer {
+  display: flex;
+  align-items: center;
+  margin-top: -2rem;
+}
+
+.quanButton {
+  width: 2rem;
+  height: 2rem;
+  background-color: white;
+  border-radius: 0.6rem;
+  position: relative;
+}
+
+.quantity {
+  margin-left: 0.7rem;
+  margin-right: 0.7rem;
+}
+
+.quanButton p {
+  font-size: 1.5rem;
+  color: black;
+  position: absolute;
+  left: 0.6rem;
+  top: -0.3rem;
+}
+
+.addButton {
+  margin-top: 4rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 6rem;
+  height: 2rem;
+
+  background-color: $orangeFull;
+  border-radius: 0.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  right: 0;
+}
+
+.arrBack {
+  position: absolute;
+  left: 1.7rem;
+  top: 1.5rem;
+
+  width: 2rem;
+  height: 2rem;
+
+  background: url(../img/arrow-left-solid.svg) no-repeat;
+}
+
+.heartBorderedProduct {
+  position: absolute;
+  right: 1.7rem;
+  top: 1.5rem;
+
+  width: 2rem;
+  height: 2rem;
+
+  background: url(../img/heart-regular.svg) no-repeat;
+}
+
+.heartFilledProduct {
+  position: absolute;
+  right: 1.7rem;
+  top: 1.5rem;
+
+  width: 2rem;
+  height: 2rem;
+
+  background: url(../img/heart-solid.svg) no-repeat;
+}
+
+.buttonArrowDown {
+  margin-left: 0.5rem;
+  width: 1.25rem;
+  height: 1.5rem;
+  position: relative;
+  margin-top: -0.1rem;
+}
+
+.btnTransform {
+  transform: rotate(-90deg) translateX(-0.2rem) translateY(-0.2rem);
+  transition: 0.3s;
+}
+
+.arrBoth {
+  background-color: #fff;
+  width: 0.8rem;
+  height: 0.2rem;
+  position: absolute;
+  top: 1rem;
+  border-radius: 1rem;
+}
+
+.arrLeft {
+  left: 0;
+  transform: rotate(45deg);
+}
+
+.arrRight {
+  right: 0;
+  transform: rotate(-45deg);
+}
+
+.unitSelectListContainer {
+  position: fixed;
+  // margin-top: -15rem;
+  text-align: center;
+  width: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $color-bg-lite;
+  z-index: 1;
+  border: $orangeFull solid 2px;
+  border-radius: 0.2rem;
+}
+
+.unitSelectListContainer ul {
+  list-style: none;
+  padding: 0 0;
+  font-size: 1.2rem;
+}
+
+.unitSelectListContainer ul li {
+  padding: 0.4rem 0.8rem;
+}
+
+.unitSelectListContainer ul :nth-child(odd) {
+  background-color: $color-bg;
+}
