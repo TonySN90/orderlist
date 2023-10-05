@@ -1,0 +1,23 @@
+.custom-loader {
+  // position: absolute;
+  // left: 50%;
+  // top: 30%;
+
+  width: 50px;
+  height: 50px;
+  // margin-left: auto;
+  // margin-right: auto;
+  margin: 150px auto;
+  border-radius: 50%;
+  background: radial-gradient(farthest-side, $orangeFull 94%, #0000) top/8px 8px
+      no-repeat,
+    conic-gradient(#0000 67%, $orangeFull);
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 8px), #000 0);
+  animation: s3 1s infinite linear;
+}
+
+@keyframes s3 {
+  100% {
+    transform: rotate(1turn);
+  }
+}

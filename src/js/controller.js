@@ -9,13 +9,17 @@ import headerView from "./views/headerView";
 import productView from "./views/productView";
 import menuView from "./views/menuView.js";
 import shoppinglistView from "./views/shoppinglistView";
+import dashboardView from "./views/dashboardView";
 
 const controlBackToDB = function () {
-  DashboardView.render(model.state);
-  headerView.movementCartLogo();
-  model.loadID();
-  headerView.resetHeader();
-  menuView.hideMenuEntry_Clear();
+  dashboardView.renderSpinner();
+  setTimeout(function () {
+    DashboardView.render(model.state);
+    headerView.movementCartLogo();
+    model.loadID();
+    headerView.resetHeader();
+    menuView.hideMenuEntry_Clear();
+  }, 400);
 };
 
 const controlCLearShoppingCart = function () {
@@ -82,18 +86,21 @@ const controlScroll = function () {
 };
 
 const controlRenderShoLi = function () {
-  model.resetQuantityNumber();
-  ShoppinglistView.render(model.state);
-  ShoppinglistView.addHandlerRender(controlRenderProduct);
-  DashboardView.addHandlerRender(controlRenderShoCa);
-  headerView.movementCartLogo();
-  headerView.changeOverviewTitle(model.state.dealer);
-  model.loadID(model.state);
-  model.loadCurDealer();
-  model.loadProductList();
-  ShoppinglistView.addToShoppingList(controlAddProductToShoLi);
-  menuView.displayMenuEntry_Clear();
-  model.loadScrollPosition();
+  ShoppinglistView.renderSpinner();
+  setTimeout(function () {
+    ShoppinglistView.render(model.state);
+    model.resetQuantityNumber();
+    ShoppinglistView.addHandlerRender(controlRenderProduct);
+    DashboardView.addHandlerRender(controlRenderShoCa);
+    headerView.movementCartLogo();
+    headerView.changeOverviewTitle(model.state.dealer);
+    model.loadID(model.state);
+    model.loadCurDealer();
+    model.loadProductList();
+    ShoppinglistView.addToShoppingList(controlAddProductToShoLi);
+    menuView.displayMenuEntry_Clear();
+    model.loadScrollPosition();
+  }, 300);
 };
 
 const controlQuantity = function (operator) {
@@ -102,13 +109,16 @@ const controlQuantity = function (operator) {
 };
 
 const controlRenderProduct = function (from = false) {
-  ProductView.render(model.state, from);
-  ProductView.addHandlerBack(controlClickBack);
-  headerView.movementHeader();
-  productView.addHandlerChangeQuantity(controlQuantity, from);
-  productView.addHandlerAddBookmark(controlAddBookmark);
-  productView.AddToShoppingCart(controlAddToShoppingCart);
-  productView.addHandlerSelectUnit(controlUnitSelectList);
+  productView.renderSpinner();
+  setTimeout(function () {
+    ProductView.render(model.state, from);
+    ProductView.addHandlerBack(controlClickBack);
+    headerView.movementHeader();
+    productView.addHandlerChangeQuantity(controlQuantity, from);
+    productView.addHandlerAddBookmark(controlAddBookmark);
+    productView.AddToShoppingCart(controlAddToShoppingCart);
+    productView.addHandlerSelectUnit(controlUnitSelectList);
+  }, 200);
 };
 
 // const productHelper() {
@@ -132,14 +142,17 @@ const controlBackToPV = function (productID) {
 };
 
 const controlRenderShoCa = function () {
-  shoppingCartView.render(model.state, false);
-  headerView.changeOverviewTitle(model.state.dealer, true);
-  headerView.movementArrowBackHeader();
-  headerView.addHandlerBack(controlClickBack);
-  shoppingCartView.addHandlerDeleteProduct(
-    controlDeleteProduct,
-    controlBackToPV
-  );
+  shoppingCartView.renderSpinner();
+  setTimeout(function () {
+    shoppingCartView.render(model.state, false);
+    headerView.changeOverviewTitle(model.state.dealer, true);
+    headerView.movementArrowBackHeader();
+    headerView.addHandlerBack(controlClickBack);
+    shoppingCartView.addHandlerDeleteProduct(
+      controlDeleteProduct,
+      controlBackToPV
+    );
+  }, 200);
 };
 
 const init = function () {

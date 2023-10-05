@@ -16,13 +16,8 @@ export let state = {
     bookmarked: false,
   },
   log: {
-    Beka: [
-      // { user: "User", timestamp: "12.09.2023 - 08:57" },
-      // { user: "User", timestamp: "12.09.2023 - 09:03" },
-    ],
-    Lidl: [
-      // { user: "User", timestamp: "12.09.2023 - 08:58" }
-    ],
+    Beka: [],
+    Lidl: [],
   },
 
   shoppingCart: [],
@@ -209,13 +204,13 @@ export const loadStorage = function () {
   // console.log(state);
 };
 
-// const timeout = function (s = 2.5) {
-//   return new Promise(function (_, reject) {
-//     setTimeout(function () {
-//       reject(new Error(`Request took too long! Timeout after ${s} second`));
-//     }, s * 1000);
-//   });
-// };
+const timeout = function (s = 2.5) {
+  return new Promise(function (_, reject) {
+    setTimeout(function () {
+      reject(new Error(`Request took too long! Timeout after ${s} second`));
+    }, s * 1000);
+  });
+};
 
 // const getJSON = async function (url) {
 //   try {

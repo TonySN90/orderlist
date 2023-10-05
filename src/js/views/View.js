@@ -24,6 +24,13 @@ export default class View {
     }
   }
 
+  renderSpinner() {
+    const markup = `
+    <div class="custom-loader"></div>`;
+    this._parentElementBody.innerHTML = "";
+    this._parentElementBody.insertAdjacentHTML("afterbegin", markup);
+  }
+
   addHandlerRender(handler) {
     const target = this._handlerAndTargets[handler.name];
     window.addEventListener(
