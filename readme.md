@@ -1,3 +1,3 @@
 # orderlist Project
 
-orderlist application to oder needen stuff for gastro
+web-app to order needed stuff for gastronomy
