@@ -11,27 +11,46 @@
   margin-bottom: 1rem;
 }
 
-.card {
+.shoppingListCard {
+  width: 320px;
+  height: 4.5rem;
   position: relative;
-  background-position: center;
-  background-size: 11rem;
-  background-repeat: no-repeat;
+  margin: 0 auto 0.6rem auto;
+
+  list-style: none;
+  // background: linear-gradient(to right, #ffffff 50%, #ff730006 100%);
+  background: #ffffff;
 }
 
 .cardEntry {
-  color: black;
-  padding: 1.3rem 1rem;
+  position: relative;
+}
+.cardImg {
+  // position: fixed;
+  margin-left: 0.4rem;
+  margin-top: 0.3rem;
+  width: 5rem;
+  height: 5rem;
 }
 
 .cardTitle {
   font-size: 1rem;
+  position: absolute;
+  top: 0.5rem;
+  left: 6rem;
+}
+
+.cardProductDescription {
+  font-size: 0.9rem;
+  position: absolute;
+  top: 1.7rem;
+  left: 6rem;
 }
 
 .cardEntry img {
-  width: 100px;
-  margin-left: 0.3rem;
-  margin-top: 0.5rem;
+  height: 3.8rem;
   z-index: -1;
+  clip-path: circle(50% at 50% 50%);
 }
 
 .imgSize {
@@ -43,8 +62,8 @@
 
 .heart {
   position: absolute;
-  right: 1rem;
-  bottom: 1rem;
+  right: 0.6rem;
+  top: 0.3rem;
   width: 1.5rem;
   height: 1.5rem;
 }
@@ -58,21 +77,14 @@
 }
 
 .cardsShoppingCard {
-  width: 2rem;
-  height: 2rem;
-  // background-color: $color-bg;
-  border-radius: 50%;
-
   position: absolute;
-  left: 1rem;
-  bottom: 0.6rem;
+  right: 0.6rem;
+  bottom: 0.8rem;
 }
+
 .cartImg {
-  position: absolute;
-  left: 0.4rem;
-  top: 0.4rem;
   width: 1.5rem;
-  height: 1.1rem;
+  height: 2rem;
   background: url(../img/cart-shopping-solid.svg) no-repeat;
 }
 

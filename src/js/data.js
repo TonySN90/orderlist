@@ -26,6 +26,8 @@ export let productsLidl = [
     category: "vegAndFruit",
     image_src:
       "https://img.rewe-static.de/0708720/7360590_digital-image.png?impolicy=s-products&imwidth=464&output-format=image/webp",
+    description:
+      "Gurken sind eine beliebte Gemüsesorte, die zur Familie der Kürbisgewächse (Cucurbitaceae) gehört. Sie haben eine glatte, grüne Haut, obwohl es auch Sorten mit gelber oder weißer Haut gibt. Gurken sind in der Regel länglich und können eine Länge von etwa 15 bis 30 Zentimetern haben. Das Innere der Gurke ist saftig und knackig, während die grüne Haut manchmal leicht bitter sein kann. Gurken haben einen erfrischenden und milden Geschmack, der sie zu einer beliebten Zutat in Salaten, Sandwiches und Sushi-Rollen macht. Sie können auch eingelegt werden, um saure Gurken herzustellen, oder in Suppen und Gazpacho-Suppen verarbeitet werden. Einige Küchen verwenden Gurken auch in gekochten oder gedünsteten Gerichten. In Bezug auf Nährstoffe sind Gurken kalorienarm und enthalten eine gute Menge an Vitaminen und Mineralstoffen wie Vitamin K, Vitamin C, Kalium und Folsäure. Sie sind auch reich an Wasser, was zur Hydratation beiträgt. Die in Gurken enthaltenen Antioxidantien können dazu beitragen, den Körper vor freien Radikalen zu schützen, und die Ballaststoffe in Gurken können die Verdauung fördern. Gurken sollten im Kühlschrank aufbewahrt werden, um ihre Frische zu erhalten, und können in Plastikfolie oder einem Plastikbeutel verpackt werden, um das Austrocknen zu verhindern. In der Küche sind Gurken vielseitig einsetzbar und werden weltweit in verschiedenen kulinarischen Traditionen geschätzt. Sie sind ein gesundes und erfrischendes Gemüse, das oft in der warmen Jahreszeit genossen wird.",
   },
   {
     id: 1004,
@@ -34,6 +36,8 @@ export let productsLidl = [
     category: "vegAndFruit",
     image_src:
       "https://img.rewe-static.de/8076862/29833725_digital-image.png?impolicy=s-products&imwidth=200&output-format=image/webp",
+    description:
+      "Orangen sind saftige Zitrusfrüchte, die zur Familie der Rutaceae gehören. Sie sind bekannt für ihre lebendig orange Farbe und ihren süß-säuerlichen Geschmack. Die äußere Schale der Orange ist oft leicht rau und texturiert, während das Innere in mehrere Segmente unterteilt ist, die von einer dünnen, leicht abziehbaren Haut umgeben sind. Der Geschmack von Orangen ist süß und erfrischend, mit einem leicht säuerlichen Unterton, der ihnen ihren charakteristischen Geschmack verleiht. Sie sind eine ausgezeichnete Quelle für Vitamin C, ein Antioxidans, das die Immunfunktion stärkt und zur Kollagenbildung beiträgt. Orangen enthalten auch Ballaststoffe, die die Verdauung fördern, sowie andere Vitamine und Mineralien wie Vitamin A, Kalium und Folsäure. Orangen werden oft frisch gegessen, indem man die Schale entfernt und die saftigen Segmente isst. Sie werden auch zu Saft gepresst, der ein beliebtes Getränk ist und reich an Vitamin C ist. Orangensaft wird auch in vielen Cocktails und Mixgetränken verwendet. Diese Früchte sind vielseitig in der Küche und können in einer Vielzahl von Gerichten und Desserts verwendet werden. Ihr erfrischender Geschmack macht sie zu einer beliebten Zutat in Salaten, Obstsalaten, Marmeladen, Desserts und sogar herzhaften Gerichten wie Hühnchen mit Orangensauce. Orangen sind ganzjährig verfügbar und werden in vielen Teilen der Welt angebaut. Sie sind nicht nur köstlich, sondern auch eine gesunde Ergänzung zu einer ausgewogenen Ernährung aufgrund ihrer reichen Nährstoffzusammensetzung.",
   },
   {
     id: 1005,
@@ -42,6 +46,8 @@ export let productsLidl = [
     category: "vegAndFruit",
     image_src:
       "https://img.rewe-static.de/8666238/38578646_digital-image.png?impolicy=s-offers&imwidth=200&output-format=image/webp",
+    description:
+      "Zitronen sind saure Zitrusfrüchte, die zur Familie der Rutaceae gehören. Sie sind bekannt für ihre leuchtend gelbe Farbe und ihren erfrischenden, sauren Geschmack. Die äußere Schale der Zitrone ist glatt und dünn und hat eine helle gelbe Farbe. Das Innere der Zitrone ist in Segmente unterteilt, die von einer saftigen, zitronigen Fruchtfleischmasse umgeben sind. Der Geschmack von Zitronen ist stark sauer und erfrischend. Sie sind eine ausgezeichnete Quelle für Vitamin C, ein Antioxidans, das die Immunfunktion stärkt und zur Kollagenbildung beiträgt. Zitronen enthalten auch andere Vitamine und Mineralstoffe wie Vitamin A, Vitamin B6, Folsäure, Kalium und Ballaststoffe. Zitronen werden auf vielfältige Weise in der Küche verwendet. Ihr Saft und ihre Schale werden häufig als Würzmittel und Aromastoffe in einer breiten Palette von Gerichten eingesetzt. Zitronensaft wird oft in Dressings, Marinaden, Soßen, Getränken und Desserts verwendet. Die Schale kann gerieben oder in dünnen Streifen als Zesten für zusätzliches Aroma verwendet werden. Zitronen sind auch eine beliebte Zutat in Getränken, von Zitronenwasser bis hin zu Limonaden und Cocktails. Ihr erfrischender Geschmack verleiht vielen Rezepten eine helle, zitrusartige Note. Diese Früchte sind das ganze Jahr über erhältlich und werden in vielen Teilen der Welt angebaut. Aufgrund ihres unverwechselbaren Geschmacks und ihrer vielfältigen Verwendungsmöglichkeiten sind Zitronen ein beliebtes Lebensmittel in der Küche und finden sich in vielen kulinarischen Traditionen weltweit.",
   },
   {
     id: 1006,
@@ -50,6 +56,8 @@ export let productsLidl = [
     category: "vegAndFruit",
     image_src:
       "https://img.rewe-static.de/0293205/8578590_digital-image.png?impolicy=s-offers&imwidth=200&output-format=image/webp",
+    description:
+      "Paprika sind eine Gruppe von Gemüsesorten, die zur Familie der Nachtschattengewächse (Solanaceae) gehören. Sie sind in verschiedenen Farben, Formen und Größen erhältlich, darunter rot, grün, gelb, orange, lila und sogar braun. Diese Vielfalt an Farben verleiht ihnen eine auffällige und attraktive Erscheinung. Das Fruchtfleisch von Paprika ist fest und saftig, und es gibt normalerweise zahlreiche kleine Samen im Inneren. Der Geschmack von Paprika variiert je nach Farbe und Reifegrad. Grüne Paprika sind in der Regel etwas bitterer und weniger süß als reife Paprika in anderen Farben, wie Rot, Gelb oder Orange. Diese reifen Paprikasorten haben einen süßeren, fruchtigeren Geschmack. Paprika sind eine hervorragende Quelle für Vitamine und Antioxidantien, insbesondere Vitamin C, das zur Stärkung des Immunsystems beiträgt. Sie enthalten auch Vitamin A, Vitamin B6, Folsäure und verschiedene Mineralstoffe wie Kalium und Eisen. Darüber hinaus sind Paprika ballaststoffreich und können zur Förderung der Verdauung beitragen. In der Küche werden Paprika auf vielfältige Weise verwendet. Sie können roh in Salaten, Wraps oder als Snack serviert werden. Sie eignen sich hervorragend zum Füllen mit einer Mischung aus Fleisch, Reis und Gemüse und werden dann oft gegrillt oder gebacken. Paprika sind auch eine wichtige Zutat in vielen internationalen Gerichten wie italienischer Paprikasalat, mexikanischer Fajitas oder spanischer Paella. Paprika sind das ganze Jahr über in den meisten Lebensmittelgeschäften erhältlich und sind ein vielseitiges und gesundes Gemüse, das in vielen verschiedenen kulinarischen Traditionen geschätzt wird. Ihre lebendigen Farben, der reiche Geschmack und die ernährungsphysiologischen Vorteile machen sie zu einer beliebten Wahl in der Küche.",
   },
   {
     id: 1007,
@@ -58,6 +66,8 @@ export let productsLidl = [
     unit: "Beutel",
     image_src:
       "https://img.rewe-static.de/8339524/30105634_digital-image.png?impolicy=s-offers&imwidth=200&output-format=image/webp",
+    description:
+      "Möhren sind eine vielseitige und beliebte Gemüsesorte, die zur Familie der Doldenblütler (Apiaceae) gehört. Sie sind in verschiedenen Größen und Farben erhältlich, wobei die gebräuchlichste Farbe ein tiefes Orange ist. Möhren haben eine charakteristische zylindrische Form und eine glatte, feste Haut. Das Innere der Möhre besteht aus saftigem, knackigem Fruchtfleisch, das süß und leicht erdig schmeckt. Der Geschmack kann je nach Sorte und Reifegrad variieren, aber im Allgemeinen sind Möhren ein angenehm süßes Gemüse. Die orangefarbene Farbe der Möhren ist auf das Vorhandensein von Beta-Carotin zurückzuführen, einem Vorläufer von Vitamin A, das wichtig für die Augengesundheit ist. Möhren sind eine ausgezeichnete Quelle für verschiedene Nährstoffe, darunter Vitamin A, Vitamin K, Kalium und Ballaststoffe. Sie sind kalorienarm und eine gesunde Ergänzung zu einer ausgewogenen Ernährung. Vitamin A aus Möhren ist wichtig für die Sehkraft und die Gesundheit der Haut. In der Küche werden Möhren auf vielfältige Weise zubereitet. Sie können roh als Snack gegessen, in Salaten gerieben oder zu Gemüsesticks verarbeitet werden. Möhren eignen sich auch hervorragend zum Kochen, Dämpfen, Braten oder Backen. Sie sind eine wichtige Zutat in vielen Gerichten wie Suppen, Eintöpfen, Stir-Frys und Gemüsebeilagen. Möhren sind das ganze Jahr über in den meisten Lebensmittelgeschäften erhältlich und sind aufgrund ihrer Süße, ihres knackigen Bisses und ihrer gesundheitlichen Vorteile ein geschätztes Gemüse in der Küche. Sie sind auch ein beliebtes Gemüse für Kinder, da sie leicht verdaulich und schmackhaft sind.",
   },
   {
     id: 1008,
@@ -66,6 +76,8 @@ export let productsLidl = [
     category: "vegAndFruit",
     image_src:
       "https://img.rewe-static.de/0005428/27448814_digital-image.png?impolicy=s-offers&imwidth=200&output-format=image/webp",
+    description:
+      "Äpfel sind eine der weltweit am häufigsten konsumierten Obstsorten und gehören zur Gattung Malus innerhalb der Familie der Rosengewächse (Rosaceae). Sie sind für ihre charakteristische runde Form, ihre glatte Haut und ihr vielfältiges Farbspektrum bekannt, das von Rot über Gelb bis hin zu Grün reicht. Das Fruchtfleisch eines Apfels ist saftig und fest, und in der Mitte befindet sich ein Kerngehäuse mit Samen. Der Geschmack von Äpfeln variiert je nach Sorte, kann aber von süß und mild bis hin zu säuerlich und erfrischend reichen. Die Haut kann dünn und knusprig oder dicker und zäher sein, je nach Sorte. Äpfel sind nicht nur köstlich, sondern auch nahrhaft. Sie sind eine ausgezeichnete Quelle für Ballaststoffe, insbesondere Pektin, das zur Verdauung beiträgt und ein Sättigungsgefühl fördert. Äpfel enthalten auch Vitamine wie Vitamin C, Vitamin A und verschiedene B-Vitamine. Darüber hinaus sind sie reich an Antioxidantien, die zur Bekämpfung von freien Radikalen im Körper beitragen. In der Küche sind Äpfel äußerst vielseitig. Sie können roh gegessen werden, als Snack oder in Salaten. Äpfel werden jedoch auch in vielen Koch- und Backrezepten verwendet, von Apfelpfannkuchen über Apfelkuchen bis hin zu Apfelmus. Sie sind eine beliebte Zutat in Desserts, aber auch in herzhaften Gerichten wie Braten oder Saucen. Äpfel werden oft das ganze Jahr über in Lebensmittelgeschäften angeboten und sind ein Grundnahrungsmittel in vielen Haushalten. Sie sind nicht nur lecker, sondern bieten auch eine breite Palette von geschmacklichen und ernährungsphysiologischen Möglichkeiten, weshalb sie in der Küche und in der Ernährung so beliebt sind.",
   },
   {
     id: 1009,
@@ -74,6 +86,8 @@ export let productsLidl = [
     category: "vegAndFruit",
     image_src:
       "https://img.rewe-static.de/0863980/11742250_digital-image.png?impolicy=s-offers&imwidth=200&output-format=image/webp",
+    description:
+      "Rucola, auch als Rauke oder Arugula bekannt, ist ein grünes Blattgemüse, das zur Familie der Kreuzblütler (Brassicaceae) gehört. Dieses Blattgemüse hat in den letzten Jahren an Popularität gewonnen und ist bekannt für seinen würzigen und leicht nussigen Geschmack. Rucola hat längliche, gezahnte Blätter, die dunkelgrün bis tiefgrün gefärbt sind. Die Blätter sind in der Regel klein und zart, was sie ideal für Salate und andere frische Gerichte macht. Der charakteristische Geschmack von Rucola ist scharf und peppig, was ihm eine gewisse Würze verleiht. Dieses Blattgemüse ist eine ausgezeichnete Quelle für verschiedene Nährstoffe, darunter Vitamin K, Vitamin A, Vitamin C, Kalium, Folsäure und Ballaststoffe. Aufgrund seiner gesundheitsfördernden Eigenschaften wird Rucola oft als Teil einer ausgewogenen Ernährung geschätzt. In der Küche wird Rucola häufig in Salaten verwendet, um Frische und einen würzigen Akzent hinzuzufügen. Er kann auch als Belag für Pizzen, Sandwiches oder Wraps verwendet werden. Darüber hinaus wird Rucola oft als Zutat für Pesto und Saucen verwendet, um ihnen eine würzige Note zu verleihen. Die Ernte von Rucola erfolgt oft, wenn die Blätter noch jung und zart sind, um den besten Geschmack und die beste Textur zu gewährleisten. Rucola ist relativ leicht anzubauen und kann in Gärten oder Töpfen auf Balkonen angebaut werden. Insgesamt ist Rucola ein vielseitiges Blattgemüse mit einem einzigartigen Geschmacksprofil, das eine Bereicherung für viele Gerichte darstellt. Sein würziger Geschmack und seine ernährungsphysiologischen Vorteile machen ihn zu einer beliebten Wahl in der modernen Küche.",
   },
   {
     id: 1010,
@@ -82,6 +96,8 @@ export let productsLidl = [
     category: "vegAndFruit",
     image_src:
       "https://img.rewe-static.de/7138093/26921109_digital-image.png?impolicy=s-offers&imwidth=200&output-format=image/webp",
+    description:
+      "Lauchzwiebeln, auch Frühlingszwiebeln genannt, sind eine Gemüsesorte, die zur Familie der Lauchgewächse (Alliaceae) gehört. Sie zeichnen sich durch ihre charakteristische, längliche Form aus, bei der eine zarte weiße Zwiebelbasis mit einer grünen Stängel- und Blattstruktur verbunden ist. Diese Zwiebeln sind bekannt für ihren milden, leicht würzigen Geschmack und werden in vielen Küchen weltweit geschätzt. Die weiße Basis der Lauchzwiebel ist der Teil, der traditionell als Zwiebel verwendet wird, während die grünen Blätter oft für ihre frische, leicht scharfe Note geschätzt werden. Die Textur der weißen Basis ist zart, während die grünen Teile knackig und zart sind. Lauchzwiebeln sind eine gute Quelle für Vitamine und Mineralstoffe, insbesondere Vitamin K, Vitamin C und Folsäure. Sie enthalten auch Ballaststoffe, die zur Verdauung beitragen können. Aufgrund ihres geringen Kaloriengehalts sind sie eine gesunde Ergänzung zu einer ausgewogenen Ernährung. In der Küche werden Lauchzwiebeln vielseitig eingesetzt. Sie können roh in Salaten verwendet oder als aromatische Zutat in Suppen, Saucen und vielen anderen herzhaften Gerichten hinzugefügt werden. Die grünen Blätter eignen sich besonders gut als Garnitur oder zur Verfeinerung von Gerichten. Lauchzwiebeln sind einfach anzubauen und können in Gärten oder Töpfen auf Balkonen angebaut werden. Sie sind oft in Lebensmittelgeschäften erhältlich und können das ganze Jahr über genossen werden. Insgesamt sind Lauchzwiebeln eine geschätzte Zutat in der Küche, die eine subtile Würze und Frische in viele Gerichte bringt. Ihr mildes Aroma und ihre vielseitige Verwendbarkeit machen sie zu einem beliebten Bestandteil in zahlreichen kulinarischen Traditionen weltweit.",
   },
   {
     id: 1011,
@@ -90,6 +106,8 @@ export let productsLidl = [
     category: "vegAndFruit",
     image_src:
       "https://img.rewe-static.de/7156504/27725597_digital-image.png?impolicy=s-offers&imwidth=200&output-format=image/webp",
+    description:
+      "Zwiebeln sind eine weit verbreitete und vielseitige Gemüsesorte, die zur Familie der Lauchgewächse (Alliaceae) gehören. Sie sind für ihren charakteristischen Geschmack und ihre Verwendung in einer Vielzahl von kulinarischen Gerichten bekannt. Zwiebeln sind in verschiedenen Sorten und Größen erhältlich, darunter weiße Zwiebeln, gelbe Zwiebeln und rote Zwiebeln. Der Aufbau einer Zwiebel besteht aus mehreren Schichten von Fleisch, die von einer dünnen, trockenen Haut umgeben sind. Die äußere Schicht kann von einer dünnen, papierartigen Textur bis zu einer festeren, schalenartigen Beschaffenheit variieren. Die Farbe des Fleisches kann je nach Sorte variieren, wobei weiße Zwiebeln einen milden Geschmack haben, gelbe Zwiebeln würziger sind und rote Zwiebeln eine leicht süßliche Note aufweisen. Zwiebeln sind reich an verschiedenen Nährstoffen wie Ballaststoffen, Vitamin C, Vitamin B6 und verschiedenen Mineralstoffen wie Kalium und Folsäure. Sie sind auch eine ausgezeichnete Quelle für Antioxidantien, die zur Bekämpfung von freien Radikalen im Körper beitragen können. In der Küche werden Zwiebeln häufig als Grundzutat in vielen Gerichten verwendet. Sie werden geschält, gehackt oder geschnitten und in Pfannen mit Öl oder Butter sautiert, um als Basis für Suppen, Soßen, Eintöpfe und viele andere herzhafte Gerichte zu dienen. Zwiebeln können auch roh in Salaten, Sandwiches und Salsas verwendet werden. Zwiebeln verleihen den meisten Gerichten einen aromatischen und würzigen Geschmack und sind ein wichtiger Bestandteil vieler kulinarischer Traditionen weltweit. Ihre vielseitige Verwendungsmöglichkeit und ihr einzigartiges Aroma machen sie zu einer unverzichtbaren Zutat in der Küche.",
   },
   {
     id: 1012,
@@ -214,7 +232,7 @@ export let productsLidl = [
   {
     id: 1027,
     name: "Vanilleies",
-    unit: "Netz",
+    unit: "Packen",
     category: "snacks",
     image_src:
       "https://img.rewe-static.de/2101501/31224875_digital-image.png?impolicy=s-offers&imwidth=200&output-format=image/webp",
@@ -222,7 +240,7 @@ export let productsLidl = [
   {
     id: 1028,
     name: "Schokoeis",
-    unit: "Pack",
+    unit: "Packen",
     category: "snacks",
     image_src:
       "https://img.rewe-static.de/2101508/22053613_digital-image.png?impolicy=s-offers&imwidth=200&output-format=image/webp",

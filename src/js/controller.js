@@ -151,7 +151,7 @@ const controlBackToPV = function (productID) {
 const controlRenderShoCa = function () {
   shoppingCartView.renderSpinner();
   setTimeout(function () {
-    shoppingCartView.render(model.state, false);
+    shoppingCartView.render(model.state, true);
     headerView.changeOverviewTitle(model.state.dealer, true);
     headerView.movementArrowBackHeader();
     headerView.addHandlerBack(controlClickBack);
