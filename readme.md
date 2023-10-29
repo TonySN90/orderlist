@@ -1,3 +1,3 @@
 # orderlist Project
 
-A web-app to order needed stuff for gastronomy
+A web-app to order needed stuff for gastronomy.
