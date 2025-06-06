@@ -4,7 +4,7 @@
   "description": "Application for ordering needed stuff for gastro",
   "default": "index.html",
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.9.3",
+    "@parcel/transformer-sass": "^2.15.2",
     "sass": "^1.67.0"
   },
   "scripts": {
@@ -15,7 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "core-js": "^3.32.2",
-    "parcel": "^2.9.3",
+    "parcel": "^2.15.2",
     "regenerator-runtime": "^0.14.0"
   }
 }
